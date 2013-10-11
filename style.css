@@ -1,0 +1,2106 @@
+ /*
+Theme Name: dBx
+Theme URI: http://dbfestival.com/
+Description: Decibel Festival Year 10
+Author: Matthew Dressman
+Author URI: http://mdressman.com
+Version: 1.0
+License: GNU General License
+*/
+
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaLT.ttf') format('truetype');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaLT-Light.ttf') format('truetype');
+    font-weight: 100;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaLT-Book.ttf') format('truetype');
+    font-weight: 300;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaLT-Bold.ttf') format('truetype');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaLT-Heavy.ttf') format('truetype');
+    font-weight: 800;
+}
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/FuturaLT-LightOblique.ttf') format('truetype');
+    font-weight: 100;
+    font-style: italic;
+}
+
+body {	
+    background: #000000  url(images/DB_WEB_BACK.jpg) no-repeat fixed ;
+    font-family: 'Futura', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    }
+
+#wrapper {
+    background: #000000 url(images/md_bgplay.jpg) top no-repeat fixed;
+}
+
+#rbma-wrapper {
+    background: #000000 url(images/rbma_bg.jpg) top left repeat;
+}
+
+#rbma-2312-wrapper {
+    background: #000000 url(images/rbma-2312-bg.jpg) top left repeat;
+}
+
+#rbma-2312-wrapper .page_content, #rbma-2312-wrapper .rbma-content {
+    background: none;
+}
+
+#rbma-2312-wrapper .page_content p {
+    margin: 0;
+    padding: 0;
+}
+
+#rbma-2312 div.ss-form-container {
+    text-align: center;
+}
+
+#rbma-2312 .ss-form-desc, .ss-q-title {
+font-family: 'Futura',sans-serif;
+font-weight: 100;
+font-size: 18px;
+line-height: 22px;
+letter-spacing: 1px;
+color: #00a3dc !important;
+}
+#rbma-2312 .ss-form-title {
+    display: block !important;
+    color: #00a3dc !important;
+}
+
+#rbma-2312 .ss-navigate {
+    width: 118px;
+    margin: 20px auto;
+}
+
+#rbma-2312 .ss-navigate input {
+    background: #00a3dc;
+}
+
+#rbma-2312 a {
+    color: #00a3dc;
+}
+
+#rbma-2312 div.ss-required-asterisk, #rbma-2312 .required-message, #rbma-2312 .ss-footer, #rbma-2312 .ss-secondary-text {
+    display: none;
+}
+
+#rbma-2312 label {
+    display: inline;
+}
+
+
+.main-content {
+    background: transparent url(images/content_bg.png) repeat;
+}
+
+#blank-bg {
+    background: url(images/rbma_bg.jpg);
+}
+
+.blogwidget {
+    background: transparent url(images/content_bg.png) repeat;
+    margin-bottom: 30px;
+}
+
+
+img {
+    height: auto;
+}
+
+a {
+    color: #cc3333;
+    letter-spacing: 1px;
+}
+
+p, .page_content li {
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: justify;
+    font-size: 16px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+ul {
+    list-style: circle inside;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #cccccc;
+}
+
+h1, h2 {
+    color: white;
+    text-transform: uppercase;
+    background: #cc3333;
+    padding: 5px 0 5px 10px;
+    font-weight: 400;
+}
+
+h2, h3 {
+    font-weight: 300;
+}
+
+h1 { font-size: 40px; }
+h2 { font-size: 20px; }
+
+h1.page-title {
+    margin-left: 10px;
+}
+
+h2.partner-section-title {
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+#nav.container {
+    background: #000000;
+}
+
+
+#header {
+/*min-height: 251px;*/
+min-height: 175px;
+    }
+
+.logo {
+    position: relative;
+    float: left;
+    z-index: 99999;
+    display: block;
+    margin-top: 5px;
+    }
+
+.dates {
+    color: #F0EF97;
+    /*font-weight: 700;*/
+    display: block;
+    margin: 0;
+    }
+        
+#header-graphic {
+    height: 71px;
+    width: 31px;
+    /*background: transparent url(images/nav_wrapper_graphic.png) no-repeat;*/
+    /*background: transparent url(images/header_graphic.png) no-repeat;*/
+    background: transparent url(images/ccc_graphic.png) no-repeat;
+    margin-left: -31px;
+    float: left;
+}
+
+#primary-nav-graphic {
+    height: 30px;
+    width: 12px;
+    background: transparent url(images/primary_nav_graphic.png) no-repeat;
+    margin-right: -12px;
+    margin-top: 28px;
+    float: right;
+}
+.primary-nav-ribbon {
+    height: 24px;
+    width: 13px;
+    background: transparent url(images/primary_nav_ribbon.png) no-repeat;
+    /*margin-left: 468px;*/
+    margin-left: -13px;
+    margin-top: 28px;
+    float: left;
+}
+
+.dbx-nav-ribbon {
+    margin-left: 548px;
+    })
+
+#primary-nav-ribbon {
+    height: 24px;
+    width: 13px;
+    background: transparent url(images/primary_nav_ribbon.png) no-repeat;
+    margin-left: 468px;
+    margin-top: 26px;
+    float: left;
+}
+
+#utility-graphic {
+    height: 47px;
+    width: 26px;
+    background: transparent url(images/utility_graphic.png) no-repeat;
+    margin-right: -25px;
+    float: right;
+}
+
+.title-graphic {
+    height: 57px;
+    width: 24px;
+    background: transparent url(images/h1_graphic.png) no-repeat;
+    margin-left: -24px;
+    float: left;
+}
+.title-ribbon {
+    height: 46px;
+    width: 26px;
+    background: transparent url(images/h1_ribbon.png) no-repeat;
+    margin-right: -25px;
+    float: right;
+}
+
+#nav-wrapper {
+    /*background: transparent url(images/nav_wrapper_bg.png) repeat;*/
+    /*background: transparent url(images/featured_bg.png) repeat;*/
+    background: #cccccc;
+    /*margin: 0 10px 0 0;*/
+    /*box-shadow: 2px 2px 4px #cccccc;*/
+    height: 57px;
+    z-index: 999999999;
+}    
+
+
+
+.nav_bar {
+    display: block;
+    position: relative;
+    width: inherit;
+    padding: 0;
+    z-index: 10;
+    margin: 0 auto;
+    }
+
+    .nav_bar .container {
+        background: #000000;
+    }
+
+
+#primary_nav_wrapper {
+    float: right;
+}
+
+#primary_nav .nav {
+    /*background: transparent url(images/gradiant_pink.png) center top;*/
+    background: #cc3333;
+    margin-top:28px;
+    margin-bottom: 0;
+    padding: 0 20px;
+    /*box-shadow: 1px 3px 2px #333333*/
+}
+
+#primary_nav li a {
+    padding: 5px;
+}
+
+#primary_nav li:hover, #primary_nav a:hover {
+    background: #000000;
+    color: #ffffff;
+}
+
+/* MD NAVIGATION */
+
+.nav {
+    float: right;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.lowercase {
+    text-transform: none;
+}
+
+.nav li a {
+  text-decoration: none;
+  padding: 10px;
+  border-bottom: 0;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+#nav-wrapper li a {
+    padding: 3px 9px;
+}
+
+
+
+.nav li ul.sub-menu li a,
+.nav li ul.children li a {
+  padding-left: 30px; 
+  text-transform: uppercase;
+}
+
+ul.nav li {
+    display: inline;
+    float: left;
+    position: relative;
+    display: block; 
+}
+
+ul.nav li:hover, ul.nav li a:hover, ul.nav li a:focus {
+    color: #000000;
+    /*background: #333333; */
+}
+
+ul.nav li ul.sub-menu,
+ul.nav li ul.children {
+    /*width: 180px;*/
+    /*margin-top: 7px;*/
+    border-top: 0;
+    position: absolute;
+    left: 0;
+    display: none;
+    z-index: 8999;
+    text-align: left; 
+    margin: 0;
+    background: #cc3333;
+}
+
+ul.nav li ul.sub-menu li,
+ul.nav li ul.children li {
+    display: block;
+    margin: 3px 0; 
+    width: 100%;
+}
+
+ul.nav li ul.sub-menu li a,
+ul.nav li ul.children li a {
+    padding-left: 10px;
+    border-right: 0;
+    /*display: block;*/
+    /*width: 180px;*/
+    /*font-size: 16px;*/
+    /*border-bottom: 1px solid #ccc;*/
+    float: left;
+    /*width: 167px; */
+}
+
+ul.nav li ul.sub-menu li a:hover, ul.nav li ul.sub-menu li a:focus,
+ul.nav li ul.children li a:hover,
+ul.nav li ul.children li a:focus {
+    color: white; 
+}
+
+ul.nav li ul.sub-menu li:last-child a,
+ul.nav li ul.children li:last-child a {
+    border-bottom: 0; 
+}
+
+ul.nav li ul.sub-menu li.current-menu-item a,
+ul.nav li ul.sub-menu li.current_page_item a/*,
+ul.nav li ul.sub-menu li.current-page-ancestor a*/,
+ul.nav li ul.children li.current-menu-item a,
+ul.nav li ul.children li.current_page_item a/*,
+ul.nav li ul.children li.current-page-ancestor a */{
+    background: #000000; 
+}
+
+#menu-utility li.current-menu-item a,
+#menu-utility li.current_page_item a,
+#menu-utility li.current-menu-item a,
+#menu-utility li.current_page_item a {
+    color: #cc3333;
+}
+
+#menu-utility li.current-menu-item,
+#menu-utility li.current_page_item,
+#menu-utility li.current-menu-item,
+#menu-utility li.current_page_item {
+    border-top: 2px solid #ffffff !important;
+}
+
+ul.nav li:hover ul {
+    top: auto;
+    display: block; 
+}
+
+ul.nav li.current-menu-item a,
+ul.nav li.current_page_item a/*,
+ul.nav li.current-page-ancestor a */{
+    background: #000000; 
+}
+
+#utility_nav {
+    /*margin-left: 10px;*/
+    /*height: 36px;*/
+    /*background: transparent url(images/333_bg.png) repeat;*/
+}
+
+#utility_nav li:nth-child(1) {
+    border-top: 2px solid #d9e021;        
+}
+
+#utility_nav li:nth-child(2) {
+    border-top: 2px solid #cc3333;        
+}
+
+#utility_nav li:nth-child(3) {
+    border-top: 2px solid #23c0d7;
+}
+
+#utility_nav li:nth-child(4) {
+    border-top: 2px solid #d9e021;        
+}
+
+#utility_nav li:nth-child(5) {
+    border-top: 2px solid #cc3333;        
+}
+
+#utility_nav li:nth-child(6) {
+    border-top: 2px solid #23c0d7;
+}
+
+#utility_nav li:nth-child(7) {
+    border-top: 2px solid #d9e021;        
+}
+
+#utility_nav li:nth-child(8) {
+    border-top: 2px solid #cc3333;        
+}
+
+#utility_nav li:nth-child(9) {
+    border-top: 2px solid #23c0d7;
+}
+
+#utility_nav .nav {
+    margin-bottom: 6px;
+}
+
+#utility_nav li {
+    padding: 0 4px;
+}
+
+#utility_nav li:hover {
+    border-top: 2px solid #ffffff;
+}
+
+#utility_nav ul li a {
+    font-size: 11px;
+    padding: 0 10px;
+}
+#utility_nav ul li a:hover {
+    color: #cc3333;
+    background: none;
+}
+
+
+
+
+/* END MD NAV */
+    
+#mobilenav{
+	display: none;
+}
+
+.mobileparent{
+	margin-top: 10px !important;
+	font-size: 16px !important;
+	color: white !important;
+}
+
+.fix { 
+    position: fixed !important; top: 0; z-index: 1000; 
+}
+#nav-wrapper.fix {
+    margin: 0;
+    width: inherit;
+}
+
+
+
+h1#festival-welcome-text, h2#festival-welcome-dates {
+    background: transparent url(images/content_bg.png) repeat;
+    text-align: center;
+}
+
+h2#festival-welcome-dates { 
+    color: #cc3333;
+}
+
+
+
+
+
+
+.subfeature {
+    margin: 20px 0;
+    /*background: transparent url(images/featured_bg.png) repeat;*/
+    background: #000000;
+    min-height: 130px;
+    
+    }
+.subfeature img, .showcase-artist img {
+    border-bottom: 2px solid #cc3333;
+}
+/*.subfeature-head {
+    min-height: 268px;
+}*/
+
+/*.subfeature:hover {
+    background: white;
+}
+*/    
+
+.subfeature a h3, .showcase-artist a h3 {
+    /*color: #cc3333;*/
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.2em;
+    letter-spacing: 0;
+    padding: 5px 0 0 0;
+    /*text-shadow: 1px 1px #cc3333;*/
+}
+
+.showcase-artist a h3 {
+    padding: 0;
+}
+
+.subfeature a:hover, .showcase-artist a:hover {
+    text-decoration: none;
+}
+.subfeature a img, .showcase-artist a img {
+    margin-left: 0;
+    margin-bottom: 5px;
+    opacity: 0.6;
+}
+
+.showcase-artist a img {
+    margin-bottom: 1px;
+}
+
+.subfeature a:hover h3 {
+    /*color: #cc3333;*/
+}
+
+
+.subfeature p.venue-address, .subfeature p.venue-desc {
+    margin-bottom: 0;
+    line-height: 20px
+}
+
+.subfeature p.venue-address{
+    font-size: 16px;
+    color: #666666;    
+}
+
+.subfeature p.venue-desc, p.showcase-settimes {
+    font-size: 14px;
+    color: #cc3333;
+    font-style: italic;
+    margin-bottom: 0;
+}
+
+.showcase h1.entry-title,
+.afterhours h1.entry-title,
+.optical h1.entry-title,
+.boatparty h1.entry-title {
+    margin-bottom: 0;
+}
+.page_content .showcase h2,
+.page_content .afterhours h2,
+.page_content .optical h2,
+.page_content .boatparty h2 {
+    margin-top: 5px;
+    font-style: italic;
+}
+
+#program h1.content-heading {
+    margin-top: 20px;
+}
+
+h1.cleaner-content-heading {
+    background: black;
+    color: #cc3333;
+    font-size: 24px;
+}
+
+.home-subfeatures h1.cleaner-content-heading a {
+    color: #cc3333;
+}
+
+.home-subfeatures h1.cleaner-content-heading a:hover {
+    color: #ffffff;
+}
+
+.page_content .artist h2.db-block-label {
+    font-style: normal;
+    /*font-weight: bold;*/
+    font-size: 14px;
+    color: #333333;
+    /*padding-left: 20px;*/
+    margin: 0;
+    background: #cccccc;
+}
+
+.page_content .showcase h2.program,
+.page_content .afterhours h2.program,
+.page_content .optical h2.program,
+.page_content .boatparty h2.program,
+.page_content .artist h2.program {
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333333;
+    padding-left: 20px;
+    margin-top: 0;
+
+}
+
+.page_content .showcase h2.showcase,
+.page_content .afterhours h2.showcase,
+.page_content .optical h2.showcase,
+.page_content .boatparty h2.showcase,
+.page_content .artist h2.program {
+    background: #cccccc
+}
+
+.subfeature p.program-event-type {
+    font-size: 16px;
+    font-style: italic;
+    color: #cccccc;
+    margin-bottom: 0;
+}
+
+.subfeature span.program-venue {
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.subfeature p.program-lineup {
+    font-size: 16px;
+    margin-top: -10px;
+    color: #ffffff;
+    text-align: left;
+}
+
+
+div.program-ticket-links h3 {
+    margin-top: 26px;
+}
+
+div.program-ticket-links p {
+    margin-left: 30px;
+    margin-bottom: 5px;
+}
+
+
+.db-label {
+    background: none;
+    color: #cc3333;
+    font-size: 12px;
+    font-style: italic;
+}
+
+
+.home-subfeatures .subfeature a h3 {
+    /*padding: 4px 0 0 135px;*/
+    padding: 4px;
+}
+
+#rbma-holder {
+    overflow: hidden;
+    border-bottom: 2px solid #791f1b;
+    height: 176px;
+}
+
+
+.rbma-spotlight-logo {
+    background: url(images/RBMA_dBFestival_Logo.jpg) top center no-repeat;
+    width: 100%;
+    height: auto;
+}
+
+.rbma-content {
+    background: white;
+    color: black;
+    margin-top: -15px !important;
+}
+.rbma-content h1, .rbma-content h3, .rbma-content p, .rbma-content ul li {
+    padding: 10px;
+
+}
+
+.rbma-content h1 {
+    background: none;
+    color: black;
+   font-weight: 600;
+}
+
+.rbma-content p {
+    font-weight: 400;
+}
+
+div.rbma-content div div div ul li.crpw-item {
+    font-weight: 300;
+    list-style: none;
+    padding: 5px 0;
+    font-family: 'Futura', sans-serif;
+}
+
+h1.content-heading .home-fest-dates {
+    font-style: italic;
+    color: #000000;
+    font-size: 14px;
+    float: right;
+}
+
+.home-subfeatures h1, .social-feeds h1, .social-feeds h3 {
+    margin-left: 10px;
+}
+
+.home-subfeatures h1 a {
+    color: #ffffff;
+}
+.home-subfeatures h1 a:hover {
+    color: #000000;
+}
+
+.social-feeds h3, .home-events .subfeature a h4 {
+    background: transparent url(images/content_bg.png) repeat;
+    color: #cc3333;
+}
+
+.subfeature a h4 {
+    font-size: 14px;
+    font-style: italic;
+}
+
+.social-feeds .subfeature {
+    border-bottom: 5px solid #cc3333;
+    height: 358px;
+    overflow: hidden;
+    margin-top: 0;
+}
+
+.article, .event {
+    margin-bottom: 30px;
+}
+
+.article-header a h2 {
+    background: transparent url(images/content_bg.png) repeat;
+    color: #ffffff;
+    margin-bottom: 5px;
+    margin-top: 0;
+    /*padding-left: 3px;*/
+}
+
+.article-header a:hover h2 {
+    background: #000000;
+    color: #cc3333;
+}
+
+.article-header a h3 {
+    margin-top: 0;
+    color: #cc3333;
+    font-style: italic;
+}
+
+.article-header a:hover h2, .article-header a:hover h3 {
+    color: #cccccc;
+}
+
+.post-date, .event-date {
+    font-style: italic;
+    margin-bottom: 0;
+    color: #cc3333;
+    display: block;
+    font-weight: 100;
+
+}
+
+.post-date {
+    font-size: 12px;
+}
+
+.event-date {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+
+
+/*.AlpinePhotoTiles_inpost_container, .AlpinePhotoTiles-row:last-child {
+    padding-bottom: 0;
+}*/
+
+#partner .span12 {
+    background: transparent url(images/content_bg.png) repeat;
+}
+
+#partner .subfeature a h3 {
+    text-align: center;
+    color: white;
+    padding: 5px 0;
+    background: transparent url(images/content_bg.png) repeat;
+}
+
+/* ARTIST PAGE */
+
+h2.artist-scroll a {
+    font-size: 16px;
+}
+
+.page_content h1.artist-title {
+    position: relative;
+    margin-bottom: 0;
+}
+
+.artist-location {
+    font-size: 20px;
+    line-height: 20px;
+    color: #cccccc;
+}
+
+.artist-type {
+    font-size: 20px;
+    line-height: 20px;
+    color: black;
+    font-style: italic;
+    position: absolute;
+    right: 5px;
+    bottom: 5px;
+}
+
+
+#post-449 p {
+    background: #cc3333;
+    text-align: left;
+    font-size: 41px;
+    padding: 20px;
+    margin-right: 20px;
+    font-weight: 200;
+    text-transform: uppercase;
+    line-height: 37px;
+}
+
+#post-449 p.lineup-intro {
+    background: #000000;
+    font-size: 14px;
+    text-transform: none;
+    line-height: 20px;
+    margin-right: 0;
+    padding: 0;
+}
+
+div.issuuembed div div:last-child {
+    display: none;
+} 
+
+#about-page .left {
+    margin-left: 40px;
+}
+
+#about-page .right {
+    margin-left: 10px;
+}
+    
+.recent-sub-post-home   {
+    display: block;
+    min-height: 160px;
+   margin-bottom: 30px;
+    }
+    
+.recent-sub-post-home a {
+    display: block;
+    position: relative;
+    min-height: 30px;
+    padding: 10px;
+    margin: 0 0 3px 3px;
+    background-color: #1BBCBB;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -khtml-border-radius: 3px;
+    border-radius: 3px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.recent-sub-post-home span  {
+    display: block;
+    }
+    
+.recent-sub-post-home span.post-title   {
+    display: block;
+    font-size: 15px;
+    font-weight: 700;
+    text-transform: uppercase;
+    }
+
+.recent-sub-post-home span.arrow    {
+    position: absolute;
+    right: 10px;
+    top: 20px;
+    }
+
+.page_content {
+    background: transparent url(images/content_bg.png) repeat;
+    margin-left: 10px;
+}
+
+.page_content h1 {
+    font-size: 40px;
+    text-transform: uppercase;
+    margin: 20px 0 15px 0;
+    }
+
+.entry-content {
+    margin-top: 10px;
+}
+
+.feature-footer {
+    padding-left: 10px;
+}
+
+
+.category-feature p {
+    padding: 10px 20px 10px 30px ;
+}
+
+h1.content-heading {
+    font-size: 20px;
+}
+
+h1.content-heading.artist-performing {
+    margin-bottom: 3px;
+}
+h2.artist-showcase {
+    background: none;
+    margin: 0;
+    padding: 0;
+}
+
+.attachment-span6 {
+    margin-left: 0;
+}
+
+.wpcf7-text, .wpcf7-textarea {
+    width: 96%;
+}
+
+.split-col {
+    text-align: justify;
+}
+
+.sidebar {
+    margin-left: 20px;
+}
+
+.sidebar .row {
+    margin-bottom: 20px;
+}
+
+.sidebar .row.no-bottom {
+    margin-bottom: 0;
+}
+
+.page_content .artist h2 {
+    margin: 2px 0;
+
+}
+
+.artist-widgets div.row {
+    margin-bottom: 2px;
+}
+
+.artist-widgets div.row:not(:first-child) {
+    margin-top: 40px;
+}
+
+.artist-widgets div#artist-select {
+    margin-top: 0;
+    margin-bottom: 40px;
+}
+
+.artist-widgets iframe {
+    width: 100%;
+}
+
+#artist-select select, #showcase-select select {
+  background: url(images/arrow-down.png) no-repeat right #cccccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  padding: 8px 10px; 
+  height: 100%;
+  width: 100%;
+  color: #000000;
+  font-size: 14px;
+}    
+    
+#showcase-select select {
+    margin-bottom: 0;
+}
+
+
+.sidebar-title {
+    font-size: 28px;
+}
+
+.sidebar-button {
+    margin-bottom: 20px;
+    -webkit-border-radius: 5px;
+}
+
+.sidebar-button:hover h1 {
+    background: #000000;
+    color: #cc3333;
+}
+
+.sidebar-button h1 {
+    text-align: center;
+    font-size: 14px
+}
+
+.page_content h2 {
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 20px 0 5px 0;
+    }
+
+.page_content h2 a {
+    color: white;
+}
+
+.page_content h2 a:hover {
+    color: #cc3333;
+}
+
+.page_content h3 {
+    font-size: 19px;
+    text-transform: uppercase;
+    margin: 5px 0 5px 0;
+    
+    }
+
+.page_content p {
+    font-size: 17px;
+    line-height: 22px;
+    margin: 0 0 20px 0;
+    }
+    
+    
+.page_content iframe {
+	width: 100%;
+	
+}
+
+.alignright {
+    position: relative;
+    float: right;
+    margin: 15px 0px 15px 15px;
+    }
+    
+.alignleft {
+	position: relative;
+    float: left;
+    margin: 15px 15px 15px 0px;
+	
+}   
+
+.artist-page-short-showcase a {
+	position: relative;
+	float:left;
+	clear:both;
+	margin-bottom: 10px;
+}
+
+#countdown {
+    background: transparent url(images/content_bg.png) repeat;
+    margin-left: 20px;
+}
+
+#timer-countdown, #bpm-countdown {
+    display: inline-block;
+    font-size: 20px;
+    /*font-weight: 700;*/
+    color: #ffffff;
+    text-transform: uppercase;
+    }
+    
+#timer-countdown {
+    float: left;
+    width: 329px;
+}
+
+    
+#timer-countdown span:first-letter, #bpm-countdown span:first-letter {
+	font-size: 1px;
+	color: #d8e9be;
+}
+
+#bpm-countdown {
+    position: relative;
+    float:right;
+    margin-right: 20px;
+    }
+
+#timer-countdown-days, #timer-countdown-hours, #bpm-countdown-beats, #bpm-countdown-bpm {
+    font-size: 50px;
+    }
+
+.triangle-down, .triangle-up {
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    }
+
+.triangle-up {
+    border-bottom: 13px solid white;
+    }
+
+.triangle-down {
+    border-top: 13px solid white;
+    }
+
+.bpm-up {
+    position: absolute;
+    right: 100px;
+    top: -40px;
+    }
+
+.bpm-down {
+    position: absolute;
+    right: 100px;
+    bottom: -30px;
+    }
+
+.footer-connect {
+    margin-top: 50px;
+}
+
+.email-signup {
+    float: left;
+}
+
+#constant-contact-signup div {
+    display: inline;
+    }
+
+#constant-contact-signup label {
+    display: none;
+    }
+
+#constant-contact-signup .button {
+    background: #cc3333;
+    padding: 8px 12px;
+    color: #ffffff;
+    font-size: 16px;
+    text-transform: uppercase;
+    border: none;
+    font-family: 'Futura', sans-serif;
+    }
+
+#constant-contact-signup #cc_email {
+    padding: 7px;
+    height: 20px;
+    background: #cccccc;
+    border: none;
+    color: #000000;
+    }
+
+.widget_title {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #cc3333;
+    padding: 10px 0;
+    }
+
+#footer {
+	margin-top: 30px;
+    padding: 10px;
+}
+
+.footericons {
+    float: right;
+    background: transparent url(images/content_bg.png) repeat;
+    padding: 10px;
+    margin-right: 20px;
+}
+
+.hosted {
+    text-align: center;
+    padding: 20px 0;
+    /*background: transparent url(images/content_bg.png) repeat;*/
+    }
+
+#credit {
+    display: block;
+    margin-bottom: 5px;
+}
+
+#pagely {
+    display: inline-block;
+    /*background: transparent url(images/pagely-logo-small.png) center bottom no-repeat;*/
+    background-size: 100px 25px;
+    height: 25px;
+    width: 200px;
+    padding: 0 0 25px 0;
+    margin: 0;
+    text-align: center;
+    color: #cc3333;
+    }
+
+.sm {
+    position: relative;
+    float: left;
+    height: 85px;
+    width: 85px;
+    background-size: 85px 85px;
+    margin: 0 10px;
+    }
+
+.icon-fb {
+    background: transparent url(images/facebook.png);
+    }
+
+.icon-tw {
+    background: transparent url(images/twitter.png);
+    }
+
+.icon-sc {
+    background: transparent url(images/soundcloud.png);
+    }
+
+.icon-yt {
+    background: transparent url(images/youtube.png);
+    }
+
+.icon-crate {
+    background: transparent url(images/crateplayer.png);
+    }
+
+.icon-sp {
+    background: transparent url(images/spotify.png);
+    }
+
+
+/* Artist Page Styles */
+
+.www, .fb, .tw, .sc, .ig, .yt {
+  width: 60px;
+  height: 60px;
+  float: left;
+  text-indent: -9999px;
+  margin-right: 3px; }
+
+.www:hover, .fb:hover, .tw:hover, .sc:hover, .ig:hover, .yt:hover {
+  background-position: 0 -60px; }
+
+.www {
+  background: url(images/artist_www.png) -60px 0; }
+
+.fb {
+  background: url(images/artist_facebook.png) -60px 0; }
+
+.tw {
+  background: url(images/artist_twitter.png) -60px 0; }
+
+.sc {
+  background: url(images/artist_soundcloud.png) -60px 0; }
+
+.ig {
+  background: url(images/artist_instagram.png) -60px 0; }
+
+.yt {
+  background: url(images/artist_youtube.png) -60px 0; }
+
+.artist-page {
+    padding: 0px;
+    }
+
+.artist-page-title {
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 40px;
+    line-height: 30px;
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    }
+
+.artist-page-img-wrapper, .artist-page-venue-map-wrapper {
+    max-height: 400px;
+    overflow: hidden;
+    position: relative;
+    }
+
+.artist-page-venue-map-wrapper iframe {
+	max-width: 770px;
+}
+
+.artist-tw {
+    background: transparent url(images/twitter_artist.png);
+    }
+
+.artist-fb {
+    background: transparent url(images/facebook_artist.png);
+    }
+
+.artist-yt {
+    background: transparent url(images/youtube_artist.png);
+    }
+
+.artist-as {
+    background: transparent url(images/as_artist.png);
+    }
+
+.artist-sc {
+    background: transparent url(images/soundcloud_artist.png);
+    }
+
+.artist-www {
+    background: transparent url(images/web_artist.png);
+    }
+
+.artist-pf {
+    background: transparent url(images/pf_artist.png);
+    }
+
+.artist-page iframe, .artist-page object {
+    width: 100% !important;
+    height: 400px !important;
+    }
+
+
+#featuredsequence-sidebar {
+    padding: 20px;
+    background: #1BBCBB;
+    margin-bottom: 20px;
+        }
+        
+body#schedorg {
+    color: #c3c3c3;
+}
+
+#sched-iframe iframe {
+    width: 1150px !important;
+}
+
+#sched-page-grid #sched-content th {
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+.sched-container-dates {
+    color: #cc3333;
+    font-size: 18px;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+
+
+
+span.sidebartitle {
+    text-transform: uppercase;
+    display: block;
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+    background: #1BBCBB;
+}
+
+
+
+
+
+/*---single php---*/
+
+.single-sidebar {
+    margin-right: 40px;
+}
+
+.single-sidebar-title {
+    text-transform: uppercase;
+    display: block;
+    color: #cc3333;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 20px;
+    text-align: center;
+    background: transparent url(images/featured_bg.png) repeat;
+}
+
+.blogwidget ul {
+	list-style: none;
+	margin: 0;
+}
+
+.blogwidget ul li {
+    background: transparent url(images/featured_bg.png); 
+}
+
+.blogwidget ul li:hover {
+    background: transparent url(images/content_bg.png); 
+}
+
+.blogwidget ul li a {
+	padding: 10px 20px;
+	display: block;
+	font-size: 17px;
+	border-bottom: 1px dotted #cc3333;
+	color: #cccccc;
+	
+}
+.blogwidget ul li a:hover {
+	text-decoration: none;
+	color: #ffffff;
+	
+	
+}
+
+#filters {
+    margin-left: 10px;
+    background: black;
+    padding: 10px;
+}
+
+.filter-label {
+    font-size: 16px;
+    color: #cccccc;
+    font-style: italic;
+}
+
+#filters p {
+    font-size: 22px;
+}
+
+#filters p a:hover {
+    color: white;
+}
+
+#filters p a.selected {
+    color: white;
+}
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height, width;
+     -moz-transition-property: height, width;
+      -ms-transition-property: height, width;
+       -o-transition-property: height, width;
+          transition-property: height, width;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+#gallery-1 img {
+    width: auto;
+    border: none !important;
+}
+
+
+@media (max-width: 480px) {
+
+
+#featuredsequence .topfeatured-artist img {
+    width: auto;
+    height: 190px;
+    display: block;
+    margin-top: 51px;
+    margin-left: 0px;
+}
+
+#primary_nav .nav {
+    margin-top: 8px;
+}
+
+#rbma-holder {
+    width: 375px;
+    height: 224px;
+}
+
+
+#timer-countdown-days, #timer-countdown-hours, #bpm-countdown-beats, #bpm-countdown-bpm {
+    font-size: 30px;
+    
+}
+    
+
+    #bpm-countdown, #timer-countdown {
+        font-size: 14px;
+        margin: 10px 10px;
+        
+    }
+    
+    canvas {
+        display: none;
+    }
+    
+  
+}
+
+
+
+
+
+@media (max-width: 767px) {
+
+    .social-feeds {
+        display: none;
+    }
+    h1.content-heading {
+        width: 100%;
+    }
+
+    #sched-iframe iframe, #sched-content {
+        width: 385px !important;
+    }
+
+    .body {
+    padding-left: 0px;
+    padding-right: 0px;
+    }
+
+    /*.logo {
+    position: relative;
+    float: left;
+    z-index: 9999;
+    padding: 10px 0px;
+    max-width: 100%;
+    display: block
+    }*/
+    
+    #nav-wrapper {
+        /*height: auto;*/
+        margin-right: 0;
+    }
+
+    #primari_nav .nav {
+        margin-top: 6px;
+    }
+
+    #header-graphic, #primary-nav-graphic {
+        display: none;
+    }
+
+
+    #rbma-holder {
+        width: 375px;
+        height: 224px;
+    }
+
+    
+
+[class*="span"], .row-fluid [class*="span"] {
+    float: left;
+}
+    
+    
+
+    
+.subfeature {
+    /*border-bottom: 1px solid #63c6bf;
+    margin-bottom: 20px;*/
+}
+
+    .dates {
+    font-size: 17px;
+    line-height: 17px;
+    margin-top: 0 !important;
+    }
+    
+    .featured-home {
+        display: none;
+    }
+
+#logo_symbol {
+    display: none;
+    }
+    
+.nav_bar {
+    text-align: center;
+    height: auto;
+    z-index: 999999999;
+    float: left;
+    }
+    
+.nav_bar ul {
+    text-align: center;
+
+}
+
+.nav_bar ul li a {
+    font-size: 14px;
+    padding: 10px 10px 34px 10px;
+}
+
+#nav-wrapper {
+    margin: 0;
+  }
+  .span12 {
+    width: 100% !important;
+  }
+
+#comeback {
+    margin-left: 0px;
+    }
+
+.sm {
+    position: relative;
+    float: left;
+    height: 45px;
+    width: 45px;
+    background-size: 45px 45px;
+    margin: 0 5px;
+    }
+
+#bpm-countdown, #timer-countdown {
+    margin: 10px 0;
+    position: relative;
+    float: left;
+    }
+    
+    #header {
+    padding-top: 20px;
+    padding-bottom: 0px;
+    }
+    
+    
+#featuredsequence .artist-info {
+    
+    padding: 5px 5px 5px 6px;
+    
+}   
+    
+
+    
+}
+
+
+/* MD CUSTOM */
+
+.pad-me {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.clearfix{zoom:1}.clearfix:before,.clearfix:after{content:"";display:table}.clearfix:after{clear:both}
+
+#fb-root {
+    display: none;
+}
+
+.fb_iframe_widget, .fb_iframe_widget span, .fb_iframe_widget span iframe[style] {
+  width: 100% !important; }
+
+.fb-like-box {
+    background: white;
+}
+
+.fb-comments, .fb-comments iframe[style] {width: 100% !important;}
+
+.next-show h4 {
+    text-align: right;
+    padding-top: 10px;
+}
+.next-show a {
+    font-size:20px;
+    color: white;
+}
+.next-show a:hover {
+    color: #cc3333;
+}
+
+.social-feeds .db-tweets {
+    background: none;
+    padding-bottom: 8px;
+    height: 350px;
+}
+
+.tweets {
+  color: #000000;
+  width: 100%;
+  background: white;
+  border: 1px solid #AAA;
+  padding: 5px;
+  height: 288px;
+  overflow: scroll; }
+
+.tweet {
+  overflow: hidden;
+  clear: both;
+  text-align: left;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 5px;
+  /*margin-left: 8px; */
+  margin-right: 8px; }
+
+.tweet.first {
+  border: none;
+  margin-bottom: 0px; }
+
+.tweet_foto {
+  float: left;
+  margin-right: 8px; }
+
+.tweet_text {
+  float: left;
+  font-size: 12px;
+  width: 330px;
+  line-height: 16px; 
+  color: #000000;
+}
+
+.tweet_text a {
+  color: #cc3333; }
+
+.tweet_text a:hover {
+  color: #666666; }
+
+.tweet_text a.profile, .soundcloud_artist {
+  color: #333333;
+  text-decoration: none;
+  font-weight: bold; }
+
+.tweet_text span {
+  display: block;
+  color: #ccc; }
+
+/* END MD */
+
+
+@media (min-width: 768px) and (max-width: 979px) {
+
+#sched-iframe iframe {
+    width: 722px !important;
+}
+
+#nav-wrapper li a {
+    padding: 3px 4px;
+}
+
+#rbma-holder {
+    height: 131px;
+    
+}
+
+/*#primary-nav-ribbon {
+    margin-left: 152px;
+}
+*/
+
+
+#bpm-countdown, #timer-countdown {
+    margin: 20px 0;
+    position: relative;
+    float: left;
+    }
+    
+    .dates {
+    font-size: 18px;
+    line-height: 20px;
+    margin: 0px 0 10px 0px;
+    }
+    
+    
+    .nav_bar ul li a {
+    font-size: 16px;
+    padding: 14px 10px 32px 10px;
+}
+
+
+}
+
+@media (max-width: 979px) {
+
+
+
+.feature, .feature img {
+    height: 186px;
+    }
+
+
+
+
+a.flyer-dl, a.photoshome  {
+    font-size: 26px;
+    line-height: 30px;
+    margin-top: 20px;
+    padding: 20px 20px 20px 80px;
+    }
+   
+    
+.dates {
+    font-size: 17px;
+    line-height: 17px;
+    margin: 40px 0 10px 0px;
+    }
+    
+    
+
+
+.featured-artist, .featured-artist .artist-img-wrapper, .featured-artist .artist-cover {
+    height: 140px;
+    }
+
+.subfeatured-artist, .subfeatured-artist .artist-img-wrapper, .subfeatured-artist .artist-cover {
+    height: 95px;
+    }
+
+.regular-artist, .regular-artist .artist-img-wrapper, .regular-artist .artist-cover {
+    height: 60px;
+    }
+
+.regular-artist, .featured-artist, .subfeatured-artist {
+    margin-bottom: 20px;
+    }
+
+.artist-page-short-links a:first-child {
+    margin-left: 30px;
+    }
+
+.artist-page-short-links a {
+    margin-left: 20px;
+    }
+
+.featured-home {
+    margin-bottom: 20px;
+    }
+
+.sm {
+    position: relative;
+    float: left;
+    height: 75px;
+    width: 75px;
+    background-size: 75px 75px;
+    margin: 0 5px;
+    }
+
+#bpm-countdown, #timer-countdown {
+    margin: 40px 0 60px 0;
+    position: relative;
+    float: left;
+    }
+
+.artist-page-title {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    }
+
+.content-margin {
+    margin-top: 20px
+    }
+    
+    #featuredsequence-sidebar {
+    margin-bottom: 20px;
+        }
+
+}
+
+@media (min-width: 980px) {
+
+#sched-iframe iframe {
+    width: 920px !important;
+}
+
+
+.feature, .feature img {
+    height: 242px;
+    }
+
+    #rbma-holder {
+        height: 177px;
+        
+    }
+    
+    
+.subfeature p {
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+
+.content-margin {
+    margin-top: 20px
+    }
+    
+    #featuredsequence-sidebar {
+    margin-bottom: 20px;
+        }
+        .subfeature .entry-title {
+    font-size: 28px;
+    padding-top: 10px;
+    display: block;
+    
+}
+
+
+
+}
+
+@media (min-width: 1200px) {
+
+
+#sched-iframe iframe {
+    width: 1150px !important;
+}
+
+#header {
+/*min-height: 311px;*/
+min-height: 225px;
+    }
+
+    #rbma-holder {
+        height: 221px;
+        
+    }
+
+
+
+.feature, .feature img {
+    height: 300px;
+    }
+
+a.flyer-dl, a.photoshome {
+    font-size: 28px;
+    line-height: 30px;
+    margin-top: 30px;
+    padding: 20px 20px 20px 80px;
+    }
+
+#timer-countdown-days, #timer-countdown-hours, #bpm-countdown-beats, #bpm-countdown-bpm {
+    font-size: 60px;
+    }
+    
+.dates {
+    font-size: 28px;
+    line-height: 28px;
+    margin: 50px 0 20px 0px;
+    }
+
+
+
+.featured-artist, .featured-artist .artist-img-wrapper, .featured-artist .artist-cover {
+    height: 212px;
+    }
+
+.subfeatured-artist, .subfeatured-artist .artist-img-wrapper, .subfeatured-artist .artist-cover {
+    height: 155px;
+    }
+
+.regular-artist, .regular-artist .artist-img-wrapper, .regular-artist .artist-cover {
+    height: 95px;
+    }
+
+.regular-artist, .featured-artist, .subfeatured-artist {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 30px;
+    }
+
+.regular-artist, .featured-artist, .subfeatured-artist {
+    margin-bottom: 30px;
+    }
+
+.artist-page-short-links a:first-child {
+    margin-left: 150px;
+    }
+
+.featured-home {
+    margin-bottom: 30px;
+    }
+
+.sm {
+    position: relative;
+    float: left;
+    height: 85px;
+    width: 85px;
+    background-size: 85px 85px;
+    margin: 0 10px;
+    }
+    
+a.decibelbtn {
+        font-size: 20px;
+    
+    }
+    
+.subfeature .entry-title {
+    font-size: 32px;
+    padding-top: 10px;
+    display: block;
+    
+}
+
+
+
+#about-text p {
+    font-size: 45px;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 30px 0;
+    line-height: 42px;
+    }
+    
+
+
+.content-margin {
+    margin-top: 30px
+    }
+    
+    
+.navmenu{
+	float: right;
+}
+
+
