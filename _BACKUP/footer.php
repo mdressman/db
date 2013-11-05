@@ -1,10 +1,15 @@
 
 <div id="footer" class="container">
 
-	<?php if (false !== strpos($_SERVER['REQUEST_URI'],'dbx')) { // yes festival page ?>
+	
+	<?php 
+		if (false !== strpos($_SERVER['REQUEST_URI'],'dbx')) { // yes festival page
+	?>
 	
 	<div class="row content-margin">
 		<div class="span12">
+
+	
 			<div id="timer-countdown">
 				<span id="timer-countdown-days"></span> DAYS <span id="timer-countdown-hours"></span> HOURS
 			</div>
@@ -13,13 +18,16 @@
 				<span id="bpm-countdown-beats"></span> BEATS @ <span id="bpm-countdown-bpm">120</span> BPM <a href="#" class="triangle-up bpm-up"></a><a href="#" class="triangle-down bpm-down"></a>
 			</div>
 		</div>
+
 	</div>	
 
 	<?php } ?>
 	
+
 	<div class="row footer-connect">
 		<div class="span12">
 		
+			
 			<div class="email-signup">
 				<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('ConstantContact') ) : else :
 					endif;
@@ -35,20 +43,28 @@
 				<a href="http://www.crateplayer.com/decibelfestival" class="sm icon-crate" target="_blank" alt="CratePlayer" title="CratePlayer"></a>
 			</div>
 		</div>
+		
 	</div>
 
 	<div class="row">
 		<div class="span12 hosted">
 			<a id="credit" href="http://mdressman.com/" target="_blank">website by mdressman</a>
 			<a id="pagely" href="http://page.ly" target="_blank">WordPress Hosting by Page.ly</a>
+		
 		</div>
 	</div>
 </div>
 
+
+
+
+
+
     <!-- Le javascript
     ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
    
-    <script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+   
     <script src="<?php bloginfo( 'template_url' ); ?>/bootstrap/js/bootstrap.js"></script>
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.cycle.all.js"></script>
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.nivo.slider.pack.js"></script>
@@ -57,9 +73,9 @@
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.isotope.min.js"></script>
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.columnizer.js"></script>
     
+    
     <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/functions.js"></script>
-	
-	<script type="text/javascript">
+	 <script type="text/javascript">
 		function updateTimeCountdown(festStart) {
 			var now = new Date();
 			var dayRound = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
@@ -102,33 +118,50 @@
 				return false;
 			});
 			//if on a apge with the artist select box
-			if ($('#artist-select').length>0) {
+			if ($('#artist-select').length>0)
 				$(document).on('change', '#artist-select select', function() {
 					if ($(this).val() != '-1') window.location = $(this).val();
 				});
-			}
+			
+			if ($('.performance-venue').length>0)
+				$(document).on('click', '.performance-venue', function() {
+					if ($('.artist-page-venue-map-wrapper').is(':visible')) {
+						$('.artist-page-venue-map-wrapper').hide();
+						$('.artist-page-img-wrapper').show();
+					} else {
+						$('.artist-page-img-wrapper').hide();
+						$('.artist-page-venue-map-wrapper').show();
+					}
+				});
+			
+			if ($('#featured').length>0)
+				$('#featured').cycle({
+					fx:'fade',
+					timeout: 3500
+				});
 		});
-	</script>
+	 </script>
 
-	<script type="text/javascript">
-		setTimeout(function(){var a=document.createElement("script");
-		var b=document.getElementsByTagName("script")[0];
-		a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0017/0035.js?"+Math.floor(new Date().getTime()/3600000);
-		a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
-	</script>
+	 <script type="text/javascript">
+setTimeout(function(){var a=document.createElement("script");
+var b=document.getElementsByTagName("script")[0];
+a.src=document.location.protocol+"//dnn506yrbagrg.cloudfront.net/pages/scripts/0017/0035.js?"+Math.floor(new Date().getTime()/3600000);
+a.async=true;a.type="text/javascript";b.parentNode.insertBefore(a,b)}, 1);
+</script>
+
 	 
-	<script type="text/javascript">
-		var _gaq = _gaq || [];
-		_gaq.push(['_setAccount', 'UA-31811634-1']);
-		_gaq.push(['_trackPageview']);
-		(function() {
-		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-		})();
-	</script>
-
-	<?php wp_footer(); ?>
-
+	 <script type="text/javascript">
+ 
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-31811634-1']);
+  _gaq.push(['_trackPageview']);
+ 
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+ 
+</script>
     </body>
 </html>

@@ -185,7 +185,7 @@ min-height: 175px;
 .logo {
     position: relative;
     float: left;
-    z-index: 99999;
+    /*z-index: 99999;*/
     display: block;
     margin-top: 5px;
     }

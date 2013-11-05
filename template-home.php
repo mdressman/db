@@ -25,69 +25,6 @@ get_header(); ?>
 			</div>
 		</div>
 		
-		<div class="row home-subfeatures">
-			<div class="span6">
-				<h1 class="cleaner-content-heading"><a href="http://dbfestival.com/events">Upcoming Events</a></h1>
-
-			</div>
-		</div>
-
-
-		<div class="row home-events">
-
-			<?php 
-		     
-                    $now = time();
-                    $args = array(
-                        'post_type'=> 'event',
-						'meta_key' => '_event_date',
-						'meta_value' => $now - (36 * 60 * 60), 
-                        'meta_compare' => '>',
-                        'orderby' => 'meta_value',
-                        'order'    => 'ASC',
-						'showposts' => 3
-                    );
-                    query_posts( $args );
-
-
-					$post_counter = 0;
-
-					if (have_posts()) : while (have_posts()) : the_post();
-
-					$event_fields = array('_event_date', '_event_tickets_link','_event_facebook_link');
-
-					$event_data = array();
-
-					foreach($event_fields as $event_field) {
-						$event_data[$event_field] = get_post_meta ($post->ID, $event_field, true);
-					}
-
-
-					$post_counter++;
-				?>
-
-				<div class="span4">
-			 	<div class="subfeature pad-me">
-		 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-			    		
-			    		<?php the_post_thumbnail( 'span4' ); ?>
-			    		<div class="subfeature-head">
-			    			<span class="event-date"><?php echo date("l, F j Y", $event_data['_event_date']) ?></span>
-			    			<h3><?php the_title(); ?></h3>
-			    		</div>
-			    	</a>
-			 	</div>
-			</div>
-
-			<?php
-				if ($post_counter % 3 == 0 ) {
-						echo "</div><div class='row'>";
-					}
-				endwhile; endif; 
-			?>
-
-		</div> 
-
 		<div class="row home-subfeatures content-margin">
 			<div class="span6">
 				<h1 class="cleaner-content-heading">News <span style="font-size: 14px;">/ <a href="http://dbfestival.com/news">View All</a></span></h1>
@@ -112,10 +49,14 @@ get_header(); ?>
 				$post_counter++;
 			?>
 
-			<div class="span4">
+		<div class="span4">
 
 		 	<div class="subfeature pad-me">
+	 			<?php if ($post->ID == 4113) { ?>
+				<a href="http://dbfestival.com/dbx/photo-gallery" rel="bookmark" title="<?php the_title_attribute(); ?>">
+				<?php } else { ?>
 	 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+ 				<?php } ?>
 		    		
 		    		<?php the_post_thumbnail( 'span4' ); ?>
 		    		
@@ -133,6 +74,62 @@ get_header(); ?>
 			?>
 
 		</div><!--row-->	
+
+		<div class="row home-subfeatures">
+			<div class="span6">
+				<h1 class="cleaner-content-heading"><a href="http://dbfestival.com/events">Upcoming Events</a></h1>
+
+			</div>
+		</div>
+
+
+		<div class="row home-events">
+
+			<?php 		     
+                $now = time();
+                $args = array(
+                    'post_type'=> 'event',
+					'meta_key' => '_event_date',
+					'meta_value' => $now - (36 * 60 * 60), 
+                    'meta_compare' => '>',
+                    'orderby' => 'meta_value',
+                    'order'    => 'ASC',
+					'showposts' => 3
+                );
+                query_posts( $args );
+				$post_counter = 0;
+
+				if (have_posts()) : while (have_posts()) : the_post();
+
+				$event_fields = array('_event_date', '_event_tickets_link','_event_facebook_link');
+				$event_data = array();
+
+				foreach($event_fields as $event_field) {
+					$event_data[$event_field] = get_post_meta ($post->ID, $event_field, true);
+				}
+				$post_counter++;
+			?>
+
+			<div class="span4">
+			 	<div class="subfeature pad-me">
+		 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+			    		
+			    		<?php the_post_thumbnail( 'span4' ); ?>
+			    		<div class="subfeature-head">
+			    			<span class="event-date"><?php echo date("l, F j Y", $event_data['_event_date']) ?></span>
+			    			<h3><?php the_title(); ?></h3>
+			    		</div>
+			    	</a>
+			 	</div>
+			</div>
+
+			<?php
+				if ($post_counter % 3 == 0 ) {
+						echo "</div><div class='row'>";
+					}
+				endwhile; endif; 
+			?>
+		</div> 
 
 		<div class="row home-subfeatures content-margin">
 			<div class="span6">
@@ -198,7 +195,8 @@ get_header(); ?>
 				$args = array(
 					'category_name' => 'rbma',
 					'showposts' => 3,
-					'order' => 'DESC'
+					'order' => 'DESC',
+					'post__not_in'   => array(4104)
 					);
 
 					query_posts( $args );
