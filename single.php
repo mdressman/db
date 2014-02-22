@@ -37,7 +37,9 @@ get_header(); ?>
 
 						<?php
 							if ( ! post_password_required() ) {
-								the_post_thumbnail( 'full' ); 
+								if ($post->ID != 4225) { 
+									the_post_thumbnail( 'full' ); 
+								}
 							} 
 						?>
 

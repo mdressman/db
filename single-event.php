@@ -40,72 +40,31 @@ get_header(); ?>
 				<?php endwhile; // end of the loop. ?>
 				</div>	
 			</div>
-			<div class="span4 content-margin sidebar">
-				
+			<div class="span4 content-margin event-sidebar">
+
+				 <?php if($event_data['_event_tickets_link']) { ?>
+                <div class="row">
+                        <div class="span4">
+                                <a class="sidebar-button" href="<?php echo $event_data['_event_tickets_link'] ?>" target="_blank"><h1>BUY TICKETS</h1></a>
+                        </div>
+                </div>
+                <?php } ?>
+
+                <?php if($event_data['_event_facebook_link']) { ?>
+                <div class="row">
+                        <div class="span4">
+                                <a class="sidebar-button" href="<?php echo $event_data['_event_facebook_link'] ?>" target="_blank"><h1>FACEBOOK RSVP</h1></a>
+                        </div>
+                </div>
+                <? } ?>
+
 				<div class="row">
 					<div class="span4">
-
-						<div class="row">
-							<div class="span1">
-								<a class="sidebar-button" href="http://twitter.com/share?text=So excited for <?php the_title(); ?> %40dBFestival <?php echo get_permalink(); ?>" target="_blank" title="Share on Twitter" alt="Share on Twitter">
-									<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_twitter.png" /></h1></a>
-							</div>
-
-							<div class="span1">
-								<a class="sidebar-button" href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank" title="Share on Facebook" alt="Share on Facebook">
-									<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_facebook.png" /></h1></a>
-							</div>
-
-							<div class="span1">
-								<a class="sidebar-button" href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>" target="_blank" title="Share on Google+" alt="Share on Google+">
-									<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_gplus.png" /></h1></a>
-							</div>
-
-							<div class="span1">
-								<a class="sidebar-button" href="http://www.linkedin.com/shareArticle?mini=true&url=<?php echo get_permalink(); ?>" target="_blank" title="Share on LinkedIn" alt="Share on LinkedIn">
-									<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_linkedin.png" /></h1></a>
-							</div>
-						</div>
-						<br/>
-
-						<?php
-							if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Share Sidebar') ) : else :
-							endif;
-						?>
 						
-					</div>
-				</div>
 
-				<?php if($event_data['_event_tickets_link']) { ?>
-				<div class="row">
-					<div class="span4">
-						<a class="sidebar-button" href="<?php echo $event_data['_event_tickets_link'] ?>" target="_blank"><h1>BUY TICKETS</h1></a>
-					</div>
-				</div>
-				<?php } ?>
-
-				<?php if($event_data['_event_facebook_link']) { ?>
-				<div class="row">
-					<div class="span4">
-						<a class="sidebar-button" href="<?php echo $event_data['_event_facebook_link'] ?>" target="_blank"><h1>FACEBOOK RSVP</h1></a>
-					</div>
-				</div>
-				<? } ?>
-
-				<div class="row">
-					<div class="span4">
-						<?php
-							if ( function_exists('dynamic_sidebar') && dynamic_sidebar('One-off Events') ) : else :
-							endif;
-						?>
-					</div>
-				</div>
-
-				<div class="row">
-					<div class="span4">
 						<div class="blogwidget">
 							<h1 class="sidebar-title">Upcoming Events</h1>
-							<ul>
+								<ul>
 							    <?php 
 				
 									$now = time();
@@ -134,6 +93,7 @@ get_header(); ?>
 
 							
 								<li>
+
 									<a href="<?php the_permalink(); ?>">
 										<span class="post-date"><?php echo date("m.d.Y", $event_data['_event_date']) ?></span>
 										<?php the_title(); ?>
@@ -146,6 +106,38 @@ get_header(); ?>
 
 					</div>
 				</div>
+
+				<div class="row">
+					<div class="span4">
+				
+						<?php
+							if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Blog') ) : else :
+							endif;
+						?>
+					</div>
+				</div>
+
+				<div class="row">
+					<div class="span1">
+						<a class="sidebar-button" href="http://twitter.com/share?text=<?php the_title(); ?> %40dBFestival <?php echo get_permalink(); ?>" target="_blank" title="Share on Twitter" alt="Share on Twitter">
+							<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_twitter.png" /></h1></a>
+					</div>
+
+					<div class="span1">
+						<a class="sidebar-button" href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank" title="Share on Facebook" alt="Share on Facebook">
+							<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_facebook.png" /></h1></a>
+					</div>
+
+					<div class="span1">
+						<a class="sidebar-button" href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>" target="_blank" title="Share on Google+" alt="Share on Google+">
+							<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_gplus.png" /></h1></a>
+					</div>
+
+
+				</div>
+
+				
+				
 			</div>
 		</div>
 	</div>

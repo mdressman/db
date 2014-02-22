@@ -1,7 +1,7 @@
 
 <div id="footer" class="container">
 
-	<?php if (false !== strpos($_SERVER['REQUEST_URI'],'dbx')) { // yes festival page ?>
+	<?php if (false) { // if (false !== strpos($_SERVER['REQUEST_URI'],'dbx')) { // yes festival page ?>
 	
 	<div class="row content-margin">
 		<div class="span12">
@@ -40,7 +40,7 @@
 	<div class="row">
 		<div class="span12 hosted">
 			<a id="credit" href="http://mdressman.com/" target="_blank">website by mdressman</a>
-			<a id="pagely" href="http://page.ly" target="_blank">WordPress Hosting by Page.ly</a>
+			// <a id="pagely" href="http://page.ly" target="_blank">WordPress Hosting by Page.ly</a>
 		</div>
 	</div>
 </div>
@@ -68,7 +68,7 @@
 			$('#timer-countdown-hours').html(((festStart.valueOf() - hourRound.valueOf()) - (festStart.valueOf() - dayRound.valueOf()))/(1000*60*60));
 		}
 		function iniAndLoopTimer(festStart) {
-			if (typeof festStart === 'undefined') festStart = new Date(2013, 8, 25, 0, 0, 0, 0);
+			if (typeof festStart === 'undefined') festStart = new Date(2014, 8, 25, 0, 0, 0, 0);
 			updateTimeCountdown(festStart);
 			var now = new Date();
 			var nextHour = new Date(now.getFullYear(), now.getMonth(), now.getDate(), now.getHours()+1);
@@ -82,7 +82,7 @@
 			return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 		}
 		function iniAndLoopBPM(festStart) {
-			if (typeof festStart === 'undefined') festStart = new Date(2013, 8, 25, 0, 0, 0, 0);
+			if (typeof festStart === 'undefined') festStart = new Date(2014, 8, 25, 0, 0, 0, 0);
 			updateBPMCountdown(festStart);
 			window.clearTimeout(window['bpm-timout']);
 			window['bpm-timout'] = window.setTimeout("iniAndLoopBPM()", 60/parseInt($('#bpm-countdown-bpm').text(), 10)*1000);

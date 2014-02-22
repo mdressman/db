@@ -41,23 +41,24 @@ License: GNU General License
 }
 
 body {	
-    background: #000000  url(images/DB_WEB_BACK.jpg) no-repeat fixed ;
+    background: #999999  url(images/DB_WEB_BACK.jpg) no-repeat fixed ;
     font-family: 'Futura', sans-serif;
-    color: #ffffff;
+    color: #111111;
     margin: 0;
     padding: 0;
     }
 
 #wrapper {
-    background: #000000 url(images/md_bgplay.jpg) top no-repeat fixed;
+    /*background: #111111 url(images/md_bgplay.jpg) top no-repeat fixed;*/
+    background: #999999;
 }
 
 #rbma-wrapper {
-    background: #000000 url(images/rbma_bg.jpg) top left repeat;
+    background: #111111 url(images/rbma_bg.jpg) top left repeat;
 }
 
 #rbma-2312-wrapper {
-    background: #000000 url(images/rbma-2312-bg.jpg) top left repeat;
+    background: #111111 url(images/rbma-2312-bg.jpg) top left repeat;
 }
 
 #rbma-2312-wrapper .page_content, #rbma-2312-wrapper .rbma-content {
@@ -108,15 +109,15 @@ color: #00a3dc !important;
 }
 
 
-.main-content {
+/*.main-content {
     background: transparent url(images/content_bg.png) repeat;
-}
+}*/
 
 #blank-bg {
     background: url(images/rbma_bg.jpg);
 }
 
-.blogwidget {
+.event-sidebar .blogwidget ul {
     background: transparent url(images/content_bg.png) repeat;
     margin-bottom: 30px;
 }
@@ -127,12 +128,12 @@ img {
 }
 
 a {
-    color: #cc3333;
+    color: #333333;
     letter-spacing: 1px;
 }
 
 p, .page_content li {
-    font-weight: 100;
+    font-weight: 200;
     letter-spacing: 1px;
     text-align: justify;
     font-size: 16px;
@@ -145,14 +146,14 @@ ul {
 
 a:hover {
     text-decoration: none;
-    color: #cccccc;
+    color: #111111;
 }
 
 h1, h2 {
-    color: white;
+    color: #111111;
     text-transform: uppercase;
-    background: #cc3333;
-    padding: 5px 0 5px 10px;
+    /*background: #cc3333;*/
+    padding: 5px 0 5px 0;
     font-weight: 400;
 }
 
@@ -173,40 +174,32 @@ h2.partner-section-title {
 }
 
 #nav.container {
-    background: #000000;
+    background: #999999;
 }
 
 
 #header {
-/*min-height: 251px;*/
-min-height: 175px;
-    }
+    min-height: 175px;
+}
 
 .logo {
     position: relative;
     float: left;
-    /*z-index: 99999;*/
     display: block;
     margin-top: 5px;
-    }
-
-.dates {
-    color: #F0EF97;
-    /*font-weight: 700;*/
-    display: block;
-    margin: 0;
-    }
+}
         
 #header-graphic {
     height: 71px;
     width: 31px;
-    /*background: transparent url(images/nav_wrapper_graphic.png) no-repeat;*/
-    /*background: transparent url(images/header_graphic.png) no-repeat;*/
-    background: transparent url(images/ccc_graphic.png) no-repeat;
+    background: transparent url(images/666_graphic.png) no-repeat;
     margin-left: -31px;
     float: left;
 }
 
+.utility-bg-bar {
+    /*background: #111111;*/
+}
 #primary-nav-graphic {
     height: 30px;
     width: 12px;
@@ -219,7 +212,6 @@ min-height: 175px;
     height: 24px;
     width: 13px;
     background: transparent url(images/primary_nav_ribbon.png) no-repeat;
-    /*margin-left: 468px;*/
     margin-left: -13px;
     margin-top: 28px;
     float: left;
@@ -227,16 +219,16 @@ min-height: 175px;
 
 .dbx-nav-ribbon {
     margin-left: 548px;
-    })
+    }
 
-#primary-nav-ribbon {
+/*#primary-nav-ribbon {
     height: 24px;
     width: 13px;
     background: transparent url(images/primary_nav_ribbon.png) no-repeat;
     margin-left: 468px;
     margin-top: 26px;
     float: left;
-}
+}*/
 
 #utility-graphic {
     height: 47px;
@@ -264,9 +256,9 @@ min-height: 175px;
 #nav-wrapper {
     /*background: transparent url(images/nav_wrapper_bg.png) repeat;*/
     /*background: transparent url(images/featured_bg.png) repeat;*/
-    background: #cccccc;
+    background: #666666;
     /*margin: 0 10px 0 0;*/
-    /*box-shadow: 2px 2px 4px #cccccc;*/
+    /*box-shadow: 2px 2px 4px #999999;*/
     height: 57px;
     z-index: 999999999;
 }    
@@ -283,7 +275,7 @@ min-height: 175px;
     }
 
     .nav_bar .container {
-        background: #000000;
+        background: #111111;
     }
 
 
@@ -293,11 +285,11 @@ min-height: 175px;
 
 #primary_nav .nav {
     /*background: transparent url(images/gradiant_pink.png) center top;*/
-    background: #cc3333;
+    background: #393939;
     margin-top:28px;
     margin-bottom: 0;
     padding: 0 20px;
-    /*box-shadow: 1px 3px 2px #333333*/
+    /*box-shadow: 1px 3px 2px #111111*/
 }
 
 #primary_nav li a {
@@ -305,7 +297,7 @@ min-height: 175px;
 }
 
 #primary_nav li:hover, #primary_nav a:hover {
-    background: #000000;
+    background: #111111;
     color: #ffffff;
 }
 
@@ -326,7 +318,7 @@ min-height: 175px;
   padding: 10px;
   border-bottom: 0;
     color: #ffffff;
-    font-size: 14px;
+    font-size: 13px;
 }
 
 #nav-wrapper li a {
@@ -349,8 +341,8 @@ ul.nav li {
 }
 
 ul.nav li:hover, ul.nav li a:hover, ul.nav li a:focus {
-    color: #000000;
-    /*background: #333333; */
+    color: #666666;
+    /*background: #111111; */
 }
 
 ul.nav li ul.sub-menu,
@@ -364,7 +356,7 @@ ul.nav li ul.children {
     z-index: 8999;
     text-align: left; 
     margin: 0;
-    background: #cc3333;
+    background: #393939;
 }
 
 ul.nav li ul.sub-menu li,
@@ -403,7 +395,7 @@ ul.nav li ul.sub-menu li.current-page-ancestor a*/,
 ul.nav li ul.children li.current-menu-item a,
 ul.nav li ul.children li.current_page_item a/*,
 ul.nav li ul.children li.current-page-ancestor a */{
-    background: #000000; 
+    background: #111111; 
 }
 
 #menu-utility li.current-menu-item a,
@@ -426,9 +418,8 @@ ul.nav li:hover ul {
 }
 
 ul.nav li.current-menu-item a,
-ul.nav li.current_page_item a/*,
-ul.nav li.current-page-ancestor a */{
-    background: #000000; 
+ul.nav li.current_page_item a {
+    background: #111111; 
 }
 
 #utility_nav {
@@ -494,21 +485,6 @@ ul.nav li.current-page-ancestor a */{
     background: none;
 }
 
-
-
-
-/* END MD NAV */
-    
-#mobilenav{
-	display: none;
-}
-
-.mobileparent{
-	margin-top: 10px !important;
-	font-size: 16px !important;
-	color: white !important;
-}
-
 .fix { 
     position: fixed !important; top: 0; z-index: 1000; 
 }
@@ -517,50 +493,32 @@ ul.nav li.current-page-ancestor a */{
     width: inherit;
 }
 
-
-
 h1#festival-welcome-text, h2#festival-welcome-dates {
-    background: transparent url(images/content_bg.png) repeat;
+    background: #999999;
     text-align: center;
+    color: #111111;
 }
 
 h2#festival-welcome-dates { 
     color: #cc3333;
 }
 
-
-
-
-
-
 .subfeature {
-    margin: 20px 0;
-    /*background: transparent url(images/featured_bg.png) repeat;*/
-    background: #000000;
+    margin: 0 0 20px 0;
     min-height: 130px;
     
     }
 .subfeature img, .showcase-artist img {
-    border-bottom: 2px solid #cc3333;
+    border-bottom: 2px solid #393939;
 }
-/*.subfeature-head {
-    min-height: 268px;
-}*/
-
-/*.subfeature:hover {
-    background: white;
-}
-*/    
 
 .subfeature a h3, .showcase-artist a h3 {
-    /*color: #cc3333;*/
-    color: #ffffff;
+    color: #111111;
     text-transform: uppercase;
     font-size: 16px;
     line-height: 1.2em;
     letter-spacing: 0;
     padding: 5px 0 0 0;
-    /*text-shadow: 1px 1px #cc3333;*/
 }
 
 .showcase-artist a h3 {
@@ -581,7 +539,7 @@ h2#festival-welcome-dates {
 }
 
 .subfeature a:hover h3 {
-    /*color: #cc3333;*/
+    color: #333333;
 }
 
 
@@ -592,7 +550,7 @@ h2#festival-welcome-dates {
 
 .subfeature p.venue-address{
     font-size: 16px;
-    color: #666666;    
+    color: #111111;    
 }
 
 .subfeature p.venue-desc, p.showcase-settimes {
@@ -621,27 +579,27 @@ h2#festival-welcome-dates {
 }
 
 h1.cleaner-content-heading {
-    background: black;
-    color: #cc3333;
+    background: #999999;
     font-size: 24px;
+    padding-bottom: 0;
 }
 
 .home-subfeatures h1.cleaner-content-heading a {
-    color: #cc3333;
+    color: #111111;
 }
 
 .home-subfeatures h1.cleaner-content-heading a:hover {
-    color: #ffffff;
+    color: #666666;
 }
 
 .page_content .artist h2.db-block-label {
     font-style: normal;
     /*font-weight: bold;*/
     font-size: 14px;
-    color: #333333;
+    color: #111111;
     /*padding-left: 20px;*/
     margin: 0;
-    background: #cccccc;
+    background: #999999;
 }
 
 .page_content .showcase h2.program,
@@ -652,7 +610,7 @@ h1.cleaner-content-heading {
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    color: #333333;
+    color: #111111;
     padding-left: 20px;
     margin-top: 0;
 
@@ -663,25 +621,25 @@ h1.cleaner-content-heading {
 .page_content .optical h2.showcase,
 .page_content .boatparty h2.showcase,
 .page_content .artist h2.program {
-    background: #cccccc
+    background: #999999
 }
 
 .subfeature p.program-event-type {
     font-size: 16px;
     font-style: italic;
-    color: #cccccc;
+    color: #111111;
     margin-bottom: 0;
 }
 
 .subfeature span.program-venue {
     font-size: 14px;
-    color: #cccccc;
+    color: #111111;
 }
 
 .subfeature p.program-lineup {
     font-size: 16px;
     margin-top: -10px;
-    color: #ffffff;
+    color: #999999;
     text-align: left;
 }
 
@@ -695,10 +653,13 @@ div.program-ticket-links p {
     margin-bottom: 5px;
 }
 
+.slider-wrapper {
+    padding: 0 10px;
+}
 
 .db-label {
     background: none;
-    color: #cc3333;
+    color: #111111;
     font-size: 12px;
     font-style: italic;
 }
@@ -751,7 +712,7 @@ div.rbma-content div div div ul li.crpw-item {
 
 h1.content-heading .home-fest-dates {
     font-style: italic;
-    color: #000000;
+    color: #111111;
     font-size: 14px;
     float: right;
 }
@@ -764,11 +725,11 @@ h1.content-heading .home-fest-dates {
     color: #ffffff;
 }
 .home-subfeatures h1 a:hover {
-    color: #000000;
+    color: #111111;
 }
 
 .social-feeds h3, .home-events .subfeature a h4 {
-    background: transparent url(images/content_bg.png) repeat;
+    background: #999999;
     color: #cc3333;
 }
 
@@ -778,7 +739,7 @@ h1.content-heading .home-fest-dates {
 }
 
 .social-feeds .subfeature {
-    border-bottom: 5px solid #cc3333;
+    border-bottom: 5px solid #393939;
     height: 358px;
     overflow: hidden;
     margin-top: 0;
@@ -789,32 +750,25 @@ h1.content-heading .home-fest-dates {
 }
 
 .article-header a h2 {
-    background: transparent url(images/content_bg.png) repeat;
-    color: #ffffff;
-    margin-bottom: 5px;
     margin-top: 0;
-    /*padding-left: 3px;*/
 }
 
 .article-header a:hover h2 {
-    background: #000000;
-    color: #cc3333;
 }
 
 .article-header a h3 {
     margin-top: 0;
-    color: #cc3333;
     font-style: italic;
 }
 
-.article-header a:hover h2, .article-header a:hover h3 {
-    color: #cccccc;
+.article-header a h2:hover, .article-header a h3:hover {
+    color: #666666;
 }
 
 .post-date, .event-date {
     font-style: italic;
     margin-bottom: 0;
-    color: #cc3333;
+    color: #333333;
     display: block;
     font-weight: 100;
 
@@ -835,15 +789,15 @@ h1.content-heading .home-fest-dates {
     padding-bottom: 0;
 }*/
 
-#partner .span12 {
+/*#partner .span12 {
     background: transparent url(images/content_bg.png) repeat;
-}
+}*/
 
 #partner .subfeature a h3 {
     text-align: center;
-    color: white;
+    color: #111111;
     padding: 5px 0;
-    background: transparent url(images/content_bg.png) repeat;
+    /*background: transparent url(images/content_bg.png) repeat;*/
 }
 
 /* ARTIST PAGE */
@@ -860,7 +814,7 @@ h2.artist-scroll a {
 .artist-location {
     font-size: 20px;
     line-height: 20px;
-    color: #cccccc;
+    color: #999999;
 }
 
 .artist-type {
@@ -886,7 +840,7 @@ h2.artist-scroll a {
 }
 
 #post-449 p.lineup-intro {
-    background: #000000;
+    background: #111111;
     font-size: 14px;
     text-transform: none;
     line-height: 20px;
@@ -945,8 +899,11 @@ div.issuuembed div div:last-child {
     }
 
 .page_content {
-    background: transparent url(images/content_bg.png) repeat;
     margin-left: 10px;
+}
+
+#rbma-wrapper .page_content {
+    background: #cbcbcb;
 }
 
 .page_content h1 {
@@ -1028,7 +985,7 @@ h2.artist-showcase {
 }
 
 #artist-select select, #showcase-select select {
-  background: url(images/arrow-down.png) no-repeat right #cccccc;
+  background: url(images/arrow-down.png) no-repeat right #999999;
   -webkit-appearance: none;
   -moz-appearance: none;
   border-radius: 0;
@@ -1037,7 +994,7 @@ h2.artist-showcase {
   padding: 8px 10px; 
   height: 100%;
   width: 100%;
-  color: #000000;
+  color: #111111;
   font-size: 14px;
 }    
     
@@ -1048,6 +1005,9 @@ h2.artist-showcase {
 
 .sidebar-title {
     font-size: 28px;
+    background: #111111;
+    color: #999999;
+    padding-left: 10px;
 }
 
 .sidebar-button {
@@ -1056,19 +1016,25 @@ h2.artist-showcase {
 }
 
 .sidebar-button:hover h1 {
-    background: #000000;
-    color: #cc3333;
+    background: #111111;
+    color: #ffffff;
 }
 
 .sidebar-button h1 {
+    
+    background: #666666;
+    color: #111111;
+    margin-bottom: 30px;
     text-align: center;
-    font-size: 14px
+    font-size: 14px;
+    font-weight: 700;
+    font-style: italic;
 }
 
 .page_content h2 {
-    font-size: 25px;
+    font-size: 24px;
     text-transform: uppercase;
-    margin: 20px 0 5px 0;
+    margin: 20px 0 0 0;
     }
 
 .page_content h2 a {
@@ -1076,7 +1042,7 @@ h2.artist-showcase {
 }
 
 .page_content h2 a:hover {
-    color: #cc3333;
+    /*color: #cc3333;*/
 }
 
 .page_content h3 {
@@ -1196,7 +1162,7 @@ h2.artist-showcase {
     }
 
 #constant-contact-signup .button {
-    background: #cc3333;
+    background: #393939;
     padding: 8px 12px;
     color: #ffffff;
     font-size: 16px;
@@ -1208,15 +1174,15 @@ h2.artist-showcase {
 #constant-contact-signup #cc_email {
     padding: 7px;
     height: 20px;
-    background: #cccccc;
+    background: #666666;
     border: none;
-    color: #000000;
+    color: #111111;
     }
 
 .widget_title {
     text-transform: uppercase;
     font-size: 30px;
-    color: #cc3333;
+    color: #393939;
     padding: 10px 0;
     }
 
@@ -1227,33 +1193,14 @@ h2.artist-showcase {
 
 .footericons {
     float: right;
-    background: transparent url(images/content_bg.png) repeat;
+    background: #999999;
     padding: 10px;
     margin-right: 20px;
 }
 
 .hosted {
-    text-align: center;
-    padding: 20px 0;
-    /*background: transparent url(images/content_bg.png) repeat;*/
-    }
-
-#credit {
-    display: block;
-    margin-bottom: 5px;
+    font-size: 10px;
 }
-
-#pagely {
-    display: inline-block;
-    /*background: transparent url(images/pagely-logo-small.png) center bottom no-repeat;*/
-    background-size: 100px 25px;
-    height: 25px;
-    width: 200px;
-    padding: 0 0 25px 0;
-    margin: 0;
-    text-align: center;
-    color: #cc3333;
-    }
 
 .sm {
     position: relative;
@@ -1419,7 +1366,18 @@ span.sidebartitle {
     background: #1BBCBB;
 }
 
+.sg-question-title {
+    font-weight: normal !important;
+}
 
+.sg-rank-dragdrop .sg-rank-instructions {
+    color: #393939 !important;
+}
+
+.ui-sortable {
+    height: 288px !important;
+    min-height: 288px !important;
+}
 
 
 
@@ -1446,11 +1404,12 @@ span.sidebartitle {
 }
 
 .blogwidget ul li {
-    background: transparent url(images/featured_bg.png); 
+    /*background: transparent url(images/featured_bg.png); */
+    background: #888888; 
 }
 
 .blogwidget ul li:hover {
-    background: transparent url(images/content_bg.png); 
+    background: #666666; 
 }
 
 .blogwidget ul li a {
@@ -1458,7 +1417,7 @@ span.sidebartitle {
 	display: block;
 	font-size: 17px;
 	border-bottom: 1px dotted #cc3333;
-	color: #cccccc;
+	color: #333333;
 	
 }
 .blogwidget ul li a:hover {
@@ -1470,13 +1429,13 @@ span.sidebartitle {
 
 #filters {
     margin-left: 10px;
-    background: black;
+    /*background: black;*/
     padding: 10px;
 }
 
 .filter-label {
     font-size: 16px;
-    color: #cccccc;
+    color: #ffffff;
     font-style: italic;
 }
 
@@ -1485,11 +1444,11 @@ span.sidebartitle {
 }
 
 #filters p a:hover {
-    color: white;
+    color: #111111;
 }
 
 #filters p a.selected {
-    color: white;
+    color: #111111;
 }
 
 .isotope-item {
@@ -1765,7 +1724,7 @@ span.sidebartitle {
 }
 
 .tweets {
-  color: #000000;
+  color: #111111;
   width: 100%;
   background: white;
   border: 1px solid #AAA;
@@ -1796,7 +1755,7 @@ span.sidebartitle {
   font-size: 12px;
   width: 330px;
   line-height: 16px; 
-  color: #000000;
+  color: #111111;
 }
 
 .tweet_text a {
@@ -1806,7 +1765,7 @@ span.sidebartitle {
   color: #666666; }
 
 .tweet_text a.profile, .soundcloud_artist {
-  color: #333333;
+  color: #111111;
   text-decoration: none;
   font-weight: bold; }
 
@@ -1819,42 +1778,45 @@ span.sidebartitle {
 
 @media (min-width: 768px) and (max-width: 979px) {
 
-#sched-iframe iframe {
-    width: 722px !important;
-}
+    #sched-iframe iframe {
+        width: 722px !important;
+    }
 
-#nav-wrapper li a {
-    padding: 3px 4px;
-}
+    #nav-wrapper li a {
+        padding: 3px 4px;
+    }
 
-#rbma-holder {
-    height: 131px;
-    
-}
+    #rbma-holder {
+        height: 131px;
+        
+    }
 
-/*#primary-nav-ribbon {
-    margin-left: 152px;
-}
-*/
+    /*#primary-nav-ribbon {
+        margin-left: 152px;
+    }
+    */
 
 
-#bpm-countdown, #timer-countdown {
-    margin: 20px 0;
-    position: relative;
-    float: left;
+    #bpm-countdown, #timer-countdown {
+        margin: 20px 0;
+        position: relative;
+        float: left;
     }
     
     .dates {
-    font-size: 18px;
-    line-height: 20px;
-    margin: 0px 0 10px 0px;
+        font-size: 18px;
+        line-height: 20px;
+        margin: 0px 0 10px 0px;
+    }
+
+    #primary_nav .nav {
+        padding: 0;
     }
     
-    
     .nav_bar ul li a {
-    font-size: 16px;
-    padding: 14px 10px 32px 10px;
-}
+        font-size: 11px;
+        padding: 14px 10px 32px 10px;
+    }
 
 
 }

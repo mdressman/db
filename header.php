@@ -12,7 +12,7 @@
 	    <meta charset="utf-8">
 	    <title><?php wp_title(''); ?></title>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    <meta name="description" content="">
+	    
 	    <meta name="author" content="">
 
      	<meta property="og:url" content="<?php echo get_permalink(); ?>" />
@@ -22,11 +22,11 @@
 		<?php if ($fb_image) { ?>
     		<meta property="og:image" content="<?php echo $fb_image[0]; ?>" />
 		<?php } else { ?>
-			<meta property="og:image" content="http://dbfestival.com/2013/assets/dBx_SPECIAL_v3.png" />
+			<meta property="og:image" content="http://dbfestival.com/assets/fb-share-image-nov2013.jpg" />
 		<?php } ?>
 		
 	    <meta property="og:type" content="website" />
-	    <meta property="og:description" content="<?php echo "Celebrating 10 Years of Electronic Music Performance and Visual Art #dBx"; ?>"/>
+	    <meta property="og:description" content="<?php echo "Electronic music performance, visual art, and new media for your pleasure."; ?>"/>
 	    <meta property="og:site_name" content="Decibel Festival" />
 
 		
@@ -68,43 +68,25 @@
 						<div class="nav_bar">
 							<nav>
 								<?php
-
-								if (false !== strpos($_SERVER['REQUEST_URI'],'dbx')) {
-
-									wp_nav_menu(array(
-								    	'container' => false,
-								    	'container_class' => 'menu',
-								    	'menu' => __( 'The Festival Utility Menu', 'dBx' ),
-								    	'menu_class' => 'nav top-nav clearfix pad-me',
-								    	'theme_location' => 'dbx-utility-nav',
-								    	'before' => '',
-								        'after' => '',
-								        'link_before' => '',
-								        'link_after' => '',
-								        'depth' => 0,
-								    	'fallback_cb' => 'bones_main_nav_fallback'
-									));
-								} else {
-									wp_nav_menu(array(
-								    	'container' => false,
-								    	'container_class' => 'menu',
-								    	'menu' => __( 'The Utility Menu', 'dBx' ),
-								    	'menu_class' => 'nav top-nav clearfix pad-me',
-								    	'theme_location' => 'utility-nav',
-								    	'before' => '',
-								        'after' => '',
-								        'link_before' => '',
-								        'link_after' => '',
-								        'depth' => 0,
-								    	'fallback_cb' => 'bones_main_nav_fallback'
-									));
-								}
+								wp_nav_menu(array(
+							    	'container' => false,
+							    	'container_class' => 'menu',
+							    	'menu' => __( 'The Utility Menu', 'dBx' ),
+							    	'menu_class' => 'nav top-nav clearfix pad-me',
+							    	'theme_location' => 'utility-nav',
+							    	'before' => '',
+							        'after' => '',
+							        'link_before' => '',
+							        'link_after' => '',
+							        'depth' => 0,
+							    	'fallback_cb' => 'bones_main_nav_fallback'
+								));
 								?>
 							</nav>
 						</div>
 					</div>
 
-					<div class="clearfix"></div>
+					<div class="clearfix utility-bg-bar"></div>
 
 					<div id="nav-wrapper">
 
@@ -119,46 +101,30 @@
 							<div id="primary-nav-graphic"></div>
 
 							<div id="primary_nav_wrapper">
-								<div class="primary-nav-ribbon"></div>
+								<!-- <div class="primary-nav-ribbon"></div> -->
 
 								<nav>
 									<?php
 									
-									if (false !== strpos($_SERVER['REQUEST_URI'],'dbx') || false !== strpos($_SERVER['REQUEST_URI'],'partner')) {
-										wp_nav_menu(array(
+									wp_nav_menu(array(
 								    	'container' => false,
 								    	'container_class' => 'menu',
 								    	'menu' => __( 'The Main Menu', 'dBx' ),
 								    	'menu_class' => 'nav top-nav clearfix',
-								    	'theme_location' => 'main-nav',
+								    	'theme_location' => '365-nav',
 								    	'before' => '',
 								        'after' => '',
 								        'link_before' => '',
 								        'link_after' => '',
 								        'depth' => 0,
 								    	'fallback_cb' => 'bones_main_nav_fallback'
-										));
-									} else {
-										wp_nav_menu(array(
-									    	'container' => false,
-									    	'container_class' => 'menu',
-									    	'menu' => __( 'The Main Menu', 'dBx' ),
-									    	'menu_class' => 'nav top-nav clearfix',
-									    	'theme_location' => '365-nav',
-									    	'before' => '',
-									        'after' => '',
-									        'link_before' => '',
-									        'link_after' => '',
-									        'depth' => 0,
-									    	'fallback_cb' => 'bones_main_nav_fallback'
-										));
-									}
+									));
 
 									echo "<div class='clearfix'></div>";
 									?>
 								</nav>
 							</div>
-							<div class="clearfix"></div>			
+							<div class="clearfix" style="height: 0;"></div>			
 						</div>
 					</div>
 

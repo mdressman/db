@@ -5,7 +5,26 @@ $(document).ready(function(){
 	// $('.threecol').columnize({ columns: 3 });
 	// $('.fourcol').columnize({ columns: 4 });
 
-
+	var isMobile = {
+	    Android: function() {
+	        return navigator.userAgent.match(/Android/i);
+	    },
+	    BlackBerry: function() {
+	        return navigator.userAgent.match(/BlackBerry/i);
+	    },
+	    iOS: function() {
+	        return navigator.userAgent.match(/iPhone|iPad|iPod/i);
+	    },
+	    Opera: function() {
+	        return navigator.userAgent.match(/Opera Mini/i);
+	    },
+	    Windows: function() {
+	        return navigator.userAgent.match(/IEMobile/i);
+	    },
+	    any: function() {
+	        return (isMobile.Android() || isMobile.BlackBerry() || isMobile.iOS() || isMobile.Opera() || isMobile.Windows());
+	    }
+	};
 
 	var $filter = $('#nav-wrapper');
 	
@@ -15,7 +34,7 @@ $(document).ready(function(){
 	});
   
 
-	if ($filter.size())
+	if (!isMobile.any() && $filter.size())
 	{
 		$(window).scroll(function ()
 		{     
@@ -66,11 +85,11 @@ $(document).ready(function(){
 	$(".subfeature a img, .showcase-artist a img").hover(function(){
     	$(this).stop().animate({"opacity": 1.0});
 	},function(){
-	    $(this).stop().animate({"opacity": 0.6});
+	    $(this).stop().animate({"opacity": 0.8});
 	});
 
 	$(".sm").hover(function(){
-    	$(this).stop().css({"opacity": 0.7});
+    	$(this).stop().css({"opacity": 0.8});
 	},function(){
 	    $(this).stop().css({"opacity": 1.0});
 	});
