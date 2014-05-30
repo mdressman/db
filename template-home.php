@@ -10,24 +10,82 @@ get_header(); ?>
 
 	<div class="container">
 
-		<!-- <div class="row">
+		<div class="row">
 			<div class="span12">
-				<div class="slider-wrapper theme-default">
-		            <div id="slider" class="nivoSlider">
-		                <img src="<?php bloginfo( 'template_url' ); ?>/images/slider/dbx-thankyou-slide1.jpg" />
-		                <img src="<?php bloginfo( 'template_url' ); ?>/images/slider/dbx-thankyou-slide2.jpg" />
-		                <img src="<?php bloginfo( 'template_url' ); ?>/images/slider/dbx-thankyou-slide3.jpg" />
-		                <img src="<?php bloginfo( 'template_url' ); ?>/images/slider/dbx-thankyou-slide4.jpg" />
-		            </div>
-			    </div>
-			</div>
-		</div> -->
-		
-		<div class="row home-subfeatures">
-			<div class="span6">
-				<h1 class="cleaner-content-heading"><a href="http://dbfestival.com/events">Upcoming Events</a></h1>
 
+				<a href="http://dbfestival.com/db2014/lineup"><img src="<?php bloginfo( 'template_url' ); ?>/images/dB2014-Hero_1st50-1170x400-REV3.png" class="hero-img" /></a>
+
+				
 			</div>
+		</div>
+		
+		<div class="row home-subfeatures content-margin">
+			<div class="span5">
+				<h1>News  <span style="font-size: 11px;"> <a href="http://dbfestival.com/news">[ View All ]</a></span></h1>
+			</div>
+			<div class="span7 heading-spacer"></div>
+		</div>
+
+		<div class="row">
+
+			<?php 
+			$args = array(
+				'category_name' => 'news',
+				'showposts' => 3,
+				'order' => 'DESC'
+				);
+
+				query_posts( $args );
+
+				$post_counter = 0;
+
+				if (have_posts()) : while (have_posts()) : the_post();
+
+				$post_counter++;
+			?>
+
+		<div class="span4">
+
+		 	<div class="subfeature pad-me">
+
+		 		<?php
+		 			$plink = get_the_permalink();
+		 			if ($post->ID == 4623) {
+		 				$plink = 'http://bit.ly/dB2014Tix';
+		 			}
+
+		 			$imglink =  get_the_post_thumbnail($post->ID,array(370,233));
+		 			if ($post->ID == 4603) {
+		 				$imglink = '<img width="370" height="233" src="http://dbfestival.com/wp-content/uploads/2014/05/db-lineup-link.jpg" class="attachment-span4 wp-post-image">';
+		 			}
+
+
+		 		?>
+	 			
+	 			<a href="<?php echo $plink; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+		    		
+		    		<div class="img-wrapper"><?php echo $imglink; ?></div>
+		    		
+	    			<h3><?php the_title(); ?></h3>
+		    		
+		    	</a>
+		 	</div>
+		</div>
+
+			<?php
+				if ($post_counter % 3 == 0 ) {
+						echo "</div><div class='row'>";
+					}
+				endwhile; endif; 
+			?>
+
+		</div><!--row-->	
+
+		<div class="row home-subfeatures content-margin">
+			<div class="span5">
+				<h1>Events <span style="font-size: 11px;"> <a href="http://dbfestival.com/events">[ View All ]</a></span></h1>
+			</div>
+			<div class="span7 heading-spacer"></div>
 		</div>
 
 
@@ -62,7 +120,7 @@ get_header(); ?>
 			 	<div class="subfeature pad-me">
 		 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 			    		
-			    		<?php the_post_thumbnail( 'span4' ); ?>
+			    		<div class="img-wrapper"><?php the_post_thumbnail( 'span4' ); ?></div>
 			    		<div class="subfeature-head">
 			    			<span class="event-date"><?php echo date("l, F j Y", $event_data['_event_date']) ?></span>
 			    			<h3><?php the_title(); ?></h3>
@@ -79,10 +137,11 @@ get_header(); ?>
 			?>
 		</div> 
 
-		<div class="row home-subfeatures content-margin">
-			<div class="span6">
-				<h1 class="cleaner-content-heading">Festival in review</h1>
+		<!-- <div class="row home-subfeatures content-margin">
+			<div class="span5">
+				<h1 class="cleaner-content-heading">2013 Festival Recap</h1>
 			</div>
+			<div class="span7 heading-spacer"></div>
 		</div>
 
 		<div class="row">
@@ -112,7 +171,7 @@ get_header(); ?>
 	 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
  				<?php } ?>
 		    		
-		    		<?php the_post_thumbnail( 'span4' ); ?>
+		    		<div class="img-wrapper"><?php the_post_thumbnail( 'span4' ); ?></div>
 		    		
 	    			<h3><?php the_title(); ?></h3>
 		    		
@@ -127,119 +186,16 @@ get_header(); ?>
 				endwhile; endif; 
 			?>
 
-		</div><!--row-->	
+		</div> --><!--row-->
 
-		
-
-		<div class="row home-subfeatures content-margin">
-			<div class="span6">
-				<h1 class="cleaner-content-heading">News <span style="font-size: 14px;">/ <a href="http://dbfestival.com/news">View All</a></span></h1>
-			</div>
-		</div>
-
-		<div class="row">
-
-			<?php 
-			$args = array(
-				'category_name' => 'news',
-				'showposts' => 3,
-				'order' => 'DESC'
-				);
-
-				query_posts( $args );
-
-				$post_counter = 0;
-
-				if (have_posts()) : while (have_posts()) : the_post();
-
-				$post_counter++;
-			?>
-
-		<div class="span4">
-
-		 	<div class="subfeature pad-me">
-	 			
-	 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-		    		
-		    		<?php the_post_thumbnail( 'span4' ); ?>
-		    		
-	    			<h3><?php the_title(); ?></h3>
-		    		
-		    	</a>
-		 	</div>
-		</div>
-
-			<?php
-				if ($post_counter % 3 == 0 ) {
-						echo "</div><div class='row'>";
-					}
-				endwhile; endif; 
-			?>
-
-		</div><!--row-->	
-
-		<div class="row home-subfeatures content-margin">
-			<div class="span6">
-				<h1 class="cleaner-content-heading">Features <span style="font-size: 14px;">/ <a href="http://dbfestival.com/features">View All</a></span></h1>
-
-			</div>
-		</div>
-
-
-		<div class="row">
-
-			<?php 
-				$args = array(
-					'category_name' => 'feature',
-					'showposts' => 3,
-					'order' => 'DESC'
-					);
-
-					query_posts( $args );
-
-					$post_counter = 0;
-
-					if (have_posts()) : while (have_posts()) : the_post();
-
-					$post_counter++;
-				?>
-
-				<div class="span4">
-			 	<div class="subfeature pad-me">
-		 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-			    		
-			    		<?php the_post_thumbnail( 'span4' ); ?>
-			    		
-		    			<h3>
-		    				<?php
-		    				the_title(); 
-		    				?>
-		    			</h3>
-			    		
-			    	</a>
-			 	</div>
-			</div>
-
-			<?php
-				if ($post_counter % 3 == 0 ) {
-						echo "</div><div class='row'>";
-					}
-				endwhile; endif; 
-			?>
-
-		</div><!--row-->	
-
-		
-		
 		<!-- SOCIAL -->
 		
 		<div class="social-feeds">
 			<div class="row content-margin">
-				<div class="span6">
-					<!-- <div class="title-graphic"></div> -->
-					<!-- <div class="title-ribbon"></div> -->
-					<h1 class="cleaner-content-heading">SOCIAL</h1>
+				<div class="span5">
+					<h1>SOCIAL</h1>
 				</div>
+				<div class="span7 heading-spacer"></div>
 			</div>
 
 			<div class="row content-margin">
@@ -265,8 +221,9 @@ get_header(); ?>
 
 				<div class="span4">
 					<!-- <h3>TWITTER</h3> -->
-					<div class="subfeature db-tweets"><a class="twitter-timeline" height="360" href="https://twitter.com/dBFestival" data-widget-id="358470775923150848">Tweets by @dBFestival</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+					<div class="subfeature db-tweets"><a class="twitter-timeline" href="https://twitter.com/dBFestival" data-widget-id="358470775923150848">Tweets by @dBFestival</a>
+						<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+					</div>
 
 				</div>
 

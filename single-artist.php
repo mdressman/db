@@ -58,7 +58,7 @@ get_header(); ?>
 									<?php } ?>
 
 									<?php echo $artist_data['_artist_location']; ?> )
-									<span style="float:right; margin-right: 10px; color: #cc3333; font-style: italic;"><?php echo $artist_data['_artist_type']; ?></span>
+									<span style="float:right; margin-right: 10px; color: #00ffab; font-style: italic;"><?php echo $artist_data['_artist_type']; ?></span>
 								</h2>
 							<?php } ?>
 	
@@ -158,6 +158,31 @@ get_header(); ?>
 						
 							<h1 class="content-heading">Bio</h1>
 							<?php the_content(); ?>
+
+							<div class="clearfix"></div>
+
+							<div class="row">
+								<div class="span4">
+									<h1 class="content-heading">Share</h1>
+								</div>
+							</div>
+							<div class="row">
+								<div class="span2">
+									<a class="sidebar-button" href="http://twitter.com/share?text=<?php the_title(); ?> %40<?php echo $artist_twitter; ?> is playing %40dBFestival! <?php echo the_permalink(); ?>	" target="_blank" title="Share on Twitter" alt="Share on Twitter">
+										<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_twitter.png" /></h1></a>
+								</div>
+
+								<div class="span2">
+									<a class="sidebar-button" href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank" title="Share on Facebook" alt="Share on Facebook">
+										<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_facebook.png" /></h1></a>
+								</div>
+
+								<div class="span2">
+									<a class="sidebar-button" href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>" target="_blank" title="Share on Google+" alt="Share on Google+">
+										<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_gplus.png" /></h1></a>
+								</div>
+
+							</div>
 							
 							<!-- like button -->
 							<?php
@@ -216,7 +241,7 @@ get_header(); ?>
 
 						echo '<div class="row">';
 			 			echo '<div class="span4">';
-			 			echo '<h1 class="content-heading">Connect</h1>';
+			 			echo '<h1 class="content-heading">Explore ' . get_the_title() . '</h1>';
 			 			echo '</div>';
 			 			echo '</div>';
 						echo '<div id="artist_links">';
@@ -282,42 +307,18 @@ get_header(); ?>
 						}	
 
 						?>
-						<div class="clearfix"></div>
 
-						<div class="row">
-							<div class="span4">
-								<h1 class="content-heading">Share</h1>
-							</div>
-						</div>
-						<div class="row">
-							<div class="span2">
-								<a class="sidebar-button" href="http://twitter.com/share?text=So excited for <?php the_title(); ?> %40<?php echo $artist_twitter; ?> at the 10th annual %40dBFestival! <?php echo the_permalink(); ?>	" target="_blank" title="Share on Twitter" alt="Share on Twitter">
-									<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_twitter.png" /></h1></a>
-							</div>
-
-							<div class="span2">
-								<a class="sidebar-button" href="http://www.facebook.com/sharer.php?u=<?php echo get_permalink(); ?>" target="_blank" title="Share on Facebook" alt="Share on Facebook">
-									<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_facebook.png" /></h1></a>
-							</div>
-
-							<div class="span2">
-								<a class="sidebar-button" href="https://plus.google.com/share?url=<?php echo get_permalink(); ?>" target="_blank" title="Share on Google+" alt="Share on Google+">
-									<h1><img src="http://dbfestival.com/wp-content/themes/md_dBx/images/share_gplus.png" /></h1></a>
-							</div>
-
-						</div>
-						
-						<div class="row">
+						<!-- <div class="row">
 							<div class="span4">
 								<h1 class="content-heading">Other Artists</h1>
 							</div>
-						</div>
+						</div> -->
 
-						<div class="row" id="artist-select">
+						<!-- <div class="row" id="artist-select"> -->
 
 							
 							
-							<div class="span4">
+							<!-- <div class="span4">
 								<select>
 									<option value="-1">CHOOSE AN ARTIST</option>
 									<?php
@@ -334,21 +335,21 @@ get_header(); ?>
 										endwhile; endif; 
 									?>
 								</select>
-							</div>
+							</div> -->
 
-							<?php
-								$next_post_link_url = get_permalink( get_adjacent_post(false,'',false)->ID ); 
-								$prev_post_link_url = get_permalink( get_adjacent_post(false,'',true)->ID );
+					<!-- 		<?php
+								$next_post_link_url = get_permalink( get_adjacent_post(true,'',false)->ID ); 
+								$prev_post_link_url = get_permalink( get_adjacent_post(true,'',true)->ID );
 							?>
-							<div class="span1">
-								<a class="sidebar-button" href="<?php echo $prev_post_link_url; ?>"><h1>PREV</h1></a>
+							<div class="span6">
+								<a class="next-prex-nav" href="<?php echo $prev_post_link_url; ?>"><h1>PREVIOUS ARTIST</h1></a>
 							</div>
 
-							<div class="span1">
-								<a class="sidebar-button" href="<?php echo $next_post_link_url; ?>"><h1>NEXT</h1></a>
+							<div class="span6">
+								<a class="next-prex-nav" href="<?php echo $next_post_link_url; ?>"><h1>NEXT ARTIST</h1></a>
 							</div> 
-
-						</div>
+ -->
+						<!-- </div> -->
 
 
 					

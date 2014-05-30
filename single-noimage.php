@@ -1,6 +1,7 @@
 <?php
 /**
  *
+ * Single Post Template: No Image
  * @package WordPress
  * @subpackage dBx
  */
@@ -11,8 +12,6 @@ get_header(); ?>
 
 			<div class="span8 main-content">
 
-
-			
 
 				<div class="page_content content-margin">
 				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
@@ -35,16 +34,6 @@ get_header(); ?>
 							}
 						?>
 
-						<?php
-							if ( ! post_password_required() ) {
-								if ($post->ID != 4225) { 
-									the_post_thumbnail( 'full' ); 
-								}
-							} 
-						?>
-
-						
-						
 						<div class="entry-content">
 							<?php the_content(); ?>
 

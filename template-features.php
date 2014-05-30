@@ -13,7 +13,7 @@ get_header(); ?>
 				<div class="page_content content-margin">
 			
 			    	<!-- <div class="title-graphic"></div> -->
-			    	<h1>Features</h1>
+			    	<h1 class="top-title">Features</h1>
 
 					<?php 
 				        query_posts( 'cat=9' );
@@ -23,12 +23,12 @@ get_header(); ?>
 
 				    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 					
-					    <header class="article-header">
+					    <header class="article-header post-details">
 						
 					    	<span class="post-date"><?php echo the_date( $d = '', $before = '', $after = '', $echo = true ); ?></span>
 					    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 						    	<h2><?php the_title(); ?></h2>
-					    		<?php the_post_thumbnail( 'full' ); ?>
+					    		<div class="img-wrapper"><?php the_post_thumbnail( 'full' ); ?></div>
 					    	</a>
               
 					    </header> <!-- end article header -->

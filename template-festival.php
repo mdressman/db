@@ -101,49 +101,6 @@ get_header(); ?>
 				endwhile; endif; 
 			?>
 
-			</div><!--row-->	
-		
-		<!-- SOCIAL -->
-		
-		<div class="social-feeds">
-			<div class="row content-margin">
-				<div class="span6">
-					<!-- <div class="title-graphic"></div> -->
-					<!-- <div class="title-ribbon"></div> -->
-					<h1 class="content-heading">SOCIAL</h1>
-				</div>
-			</div>
+			</div><!--row-->
 
-			<div class="row content-margin">
-				
-				<div class="span4">
-					<h3>FACEBOOK</h3>
-					<div class="subfeature pad-me">
-						<div class="fb-like-box" data-href="http://www.facebook.com/decibelfestival" data-width="370" data-height="385" data-show-faces="false	" data-stream="true" data-header="false"></div>
-					</div>
-				</div>
-
-				<div class="span4">
-					<h3>INSTAGRAM</h3>
-					<div class="subfeature pad-me">
-					<!-- <a href="http://instagram.com/dbfestival" target="_blank">
-						<img src="http://dbfestival.com/wp-content/themes/md_dBx/images/instagram.jpg" />
-					</a> -->
-
-						<?php echo do_shortcode( '[alpine-phototile-for-instagram user="dbfestival" src="user_recent" imgl="instagram" dltext="Instagram" style="wall" row="3" num="9" size="Th" align="center" max="100" nocredit="1"]' ); ?>
-					</div>
-
-				</div>
-
-				<div class="span4">
-					<h3>TWITTER</h3>
-					<div class="subfeature db-tweets"><a class="twitter-timeline" height="360" href="https://twitter.com/dBFestival" data-widget-id="358470775923150848">Tweets by @dBFestival</a>
-					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
-
-				</div>
-
-			</div>
-		</div>
-			
-
-<?php	get_footer(); ?>
+<?php get_footer(); ?>

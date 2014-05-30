@@ -13,7 +13,7 @@ get_header(); ?>
 			<div class="span8 main-content">
 				<div class="page_content content-margin">
 			
-			    	<h1 class="entry-title">Decibel 365</h1>
+			    	<h1 class="top-title">Decibel Presents</h1>
 
 				    <?php 
 				
@@ -43,12 +43,12 @@ get_header(); ?>
 
 				    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
 					
-					    <header class="article-header">
+					    <header class="article-header post-details">
 						    
 					    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 					    		<h2><?php the_title(); ?></h2>
 					    		<span class="event-date"><?php echo date("l, F j Y", $event_data['_event_date']) ?></span>
-					    		<?php the_post_thumbnail( 'span6' ); ?>
+					    		<div class="img-wrapper"><?php the_post_thumbnail( 'span6' ); ?></div>
 					    	</a>
               
 					    </header>					

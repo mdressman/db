@@ -9,15 +9,15 @@ get_header(); ?>
 <div class="pagewrap container">
 
 	<div class="row content-margin">
-		<div class="span8">
+		<div class="span12">
 			<!-- <div class="title-graphic"></div>
 			<div class="title-ribbon"></div> -->
-			<h1 class="page-title">2013 Decibel Festival Venues</h1>
+			<h1 class="page-title">2014 Decibel Festival Venues <span class="h1-sub">MANY MORE TO COME</span></h1>
 		</div>
 	</div>
 
 
-	<div class="row" id="venue">
+	<div class="row content-margin" id="venue">
 		<div class="span12">
 			<div class="row">
 	
@@ -50,11 +50,9 @@ get_header(); ?>
 				<div class="span4">
 					<div class="subfeature pad-me">
 						<a href="<?php echo $venue_data['_venue_url']; ?>" target="_blank" class="content-margin">
-						
 							<?php the_post_thumbnail( 'span4' ); ?>
-						
-							<h3><?php the_title(); ?></h3>
 						</a>
+						<h3><?php the_title(); ?></h3>
 						<p class="venue-address"><?php echo $venue_data['_venue_address']; ?></p>
 						<p class="venue-desc"><?php echo get_the_content(); ?></p>
 					</div>

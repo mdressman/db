@@ -114,7 +114,7 @@ get_header(); ?>
 
 							<h3>
 								<a href="<?php the_permalink(); ?>" class="content-margin"><?php the_title(); ?></a>
-								<a href="<?php echo get_post_meta ($post->ID, '_' . $post_type . '_tickets_link', true); ?>" target="_blank" alt="BUY TICKETS" title="BUY TICKETS"><img src="http://dbfestival.com/images/buy_tickets.png" style="border-bottom:none;" /></a>
+								<a href="<?php echo get_post_meta ($post->ID, '_' . $post_type . '_tickets_link', true); ?>" target="_blank" class="buy-tickets" alt="BUY TICKETS" title="BUY TICKETS"><img src="http://dbfestival.com/images/buy_tickets.png" style="border-bottom:none;" /></a>
 							</h3>
 
 							<p class="program-lineup">

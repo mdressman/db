@@ -21,9 +21,25 @@
 		<div class="span12">
 		
 			<div class="email-signup">
-				<?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('ConstantContact') ) : else :
+
+				<div class="footerwidget">
+					<span class="widget_title">EMAIL SIGNUP</span>
+
+			        <form action="http://dbfestival.us8.list-manage1.com/subscribe/post?u=a5d38ae3ed253183e978741b2&amp;id=cb967e1922" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+			        	<label for="mc_email">Email:</label>
+			        	<div class="input-text-wrap">
+			            	<input type="email" value="" name="EMAIL" class="email" id="mc_email" required>
+			            </div>
+			            <div>
+			            	<input type="submit" value="JOIN" name="subscribe" id="mc-embedded-subscribe" class="button submit">
+			            </div>
+			        </form>
+			    </div>
+		        
+
+				<!-- <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('ConstantContact') ) : else :
 					endif;
-				?>
+				?> -->
 			</div>
 
 			<div class="footericons">
@@ -55,8 +71,7 @@
     <script src="<?php bloginfo( 'template_url' ); ?>/js/twitlive-min.js"></script>
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.color-2.1.1.min.js"></script>
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.isotope.min.js"></script>
-    <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.columnizer.js"></script>
-    
+
     <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/functions.js"></script>
 	
 	<script type="text/javascript">
@@ -123,7 +138,7 @@
 		_gaq.push(['_trackPageview']);
 		(function() {
 		  var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-		  ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		  ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
 		  var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
 		})();
 	</script>

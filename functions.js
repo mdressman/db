@@ -82,7 +82,7 @@ $(document).ready(function(){
 
 	// $("#menu-365-nav").before('<div class="primary-nav-ribbon dbx-nav-ribbon"></div>');
 
-	$(".subfeature a img, .showcase-artist a img").hover(function(){
+	$(".subfeature a img, .showcase-artist a img, .post-details img").hover(function(){
     	$(this).stop().animate({"opacity": 1.0});
 	},function(){
 	    $(this).stop().animate({"opacity": 0.8});
