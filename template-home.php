@@ -13,7 +13,7 @@ get_header(); ?>
 		<div class="row">
 			<div class="span12">
 
-				<a href="http://dbfestival.com/db2014/lineup"><img src="<?php bloginfo( 'template_url' ); ?>/images/dB2014-Hero_1st50-1170x400-REV3.png" class="hero-img" /></a>
+				<a href="http://dbfestival.com/db2014/lineup"><img src="<?php bloginfo( 'template_url' ); ?>/images/dB2014-Hero_July1-1170x400.png" class="hero-img" /></a>
 
 				
 			</div>
@@ -31,7 +31,7 @@ get_header(); ?>
 			<?php 
 			$args = array(
 				'category_name' => 'news',
-				'showposts' => 3,
+				'showposts' => 6,
 				'order' => 'DESC'
 				);
 
@@ -52,14 +52,72 @@ get_header(); ?>
 		 			$plink = get_the_permalink();
 		 			if ($post->ID == 4623) {
 		 				$plink = 'http://bit.ly/dB2014Tix';
+		 			} elseif (has_category( 'mix', $post )) {
+		 				$plink = get_the_excerpt();
 		 			}
 
 		 			$imglink =  get_the_post_thumbnail($post->ID,array(370,233));
 		 			if ($post->ID == 4603) {
 		 				$imglink = '<img width="370" height="233" src="http://dbfestival.com/wp-content/uploads/2014/05/db-lineup-link.jpg" class="attachment-span4 wp-post-image">';
+		 			} elseif ($post->ID == 4837) {
+		 				$imglink = '<img width="370" height="233" src="http://dbfestival.com/wp-content/uploads/2014/07/db2014-second-lineup-announce.jpg" class="attachment-span4 wp-post-image">';
 		 			}
 
 
+		 		?>
+	 			
+	 			<a href="<?php echo $plink; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+		    		
+		    		<div class="img-wrapper"><?php echo $imglink; ?></div>
+		    		
+	    			<h3><?php the_title(); ?></h3>
+		    		
+		    	</a>
+		 	</div>
+		</div>
+
+			<?php
+				if ($post_counter % 3 == 0 ) {
+						echo "</div><div class='row'>";
+					}
+				endwhile; endif; 
+			?>
+
+		</div><!--row-->	
+
+		<div class="row home-subfeatures content-margin">
+			<div class="span5">
+				<h1>Mixes and Live Series <span style="font-size: 11px;">[ Exclusives ]</span></h1>
+			</div>
+			<div class="span7 heading-spacer"></div>
+		</div>
+
+		<div class="row">
+
+			<?php 
+			$args = array(
+				'cat' => '293,294',
+				'showposts' => 3,
+				'order' => 'DESC'
+				);
+
+				query_posts( $args );
+
+				$post_counter = 0;
+
+				if (have_posts()) : while (have_posts()) : the_post();
+
+				$post_counter++;
+			?>
+
+		<div class="span4">
+
+		 	<div class="subfeature pad-me">
+
+		 		<?php
+		 			$plink = get_the_permalink();
+
+		 			$imglink =  get_the_post_thumbnail($post->ID,array(370,233));	
 		 		?>
 	 			
 	 			<a href="<?php echo $plink; ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">

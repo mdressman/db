@@ -10,7 +10,7 @@ get_header(); ?>
 
 	<div class="row content-margin">
 		<div class="span12">
-			<h1 class="page-title">Initial 2014 Festival Lineup <span class="h1-sub">[in alphabetical order]</span></h1>
+			<h1 class="page-title">2014 Festival Lineup <span class="h1-sub">[in alphabetical order]</span></h1>
 		</div>
 	</div>
 
