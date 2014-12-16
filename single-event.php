@@ -56,7 +56,7 @@ get_header(); ?>
                                 <a class="sidebar-button" href="<?php echo $event_data['_event_facebook_link'] ?>" target="_blank"><h1>FACEBOOK RSVP</h1></a>
                         </div>
                 </div>
-                <? } ?>
+                <?php } ?>
 
 				<div class="row">
 					<div class="span4">

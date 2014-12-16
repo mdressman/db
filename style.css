@@ -575,6 +575,24 @@ h1.cleaner-content-heading {
     
 }
 
+/*2014 CONFERENCE*/
+
+.page_content p.conf-time {
+    margin-bottom: 0;
+    font-size: 14px;
+}
+
+.page_content h4.conf-title {
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.page_content p.conf-desc {
+    font-size: 12px;
+    line-height: normal;
+}
+
+
 
 .page_content .artist h2.db-block-label {
     font-style: normal;
@@ -651,6 +669,22 @@ div.program-ticket-links p {
 .home-subfeatures .subfeature a h3 {
     /*padding: 4px 0 0 135px;*/
     padding: 4px;
+}
+
+.home-cta h2 {
+    text-align: center;
+    height: 36px;
+    background: #393939;
+    color: #00ffab;
+    padding: 40px 20px;
+    font-style: italic;
+    opacity: 0.8;
+    font-size: 1.5em;
+    line-height: 20px;
+}
+
+.home-cta h2:hover {
+    opacity: 1.0;
 }
 
 .heading-spacer {
@@ -1795,7 +1829,6 @@ div[class$="sidebar"] .blogwidget, .sidebar-button h1 {
     }
     */
 
-
     #bpm-countdown, #timer-countdown {
         margin: 20px 0;
         position: relative;
@@ -1821,6 +1854,9 @@ div[class$="sidebar"] .blogwidget, .sidebar-button h1 {
         /*height: 130px;*/
     }
 
+    .home-cta h2 {
+        font-size: 0.9em;
+    }
 
 }
 
@@ -1958,6 +1994,9 @@ a.flyer-dl, a.photoshome  {
 
 @media (min-width: 1200px) {
 
+.home-cta h2 {
+    min-width: 320px;
+}
 
 #sched-iframe iframe {
     width: 1150px !important;

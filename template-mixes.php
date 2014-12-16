@@ -25,7 +25,7 @@ get_header(); ?>
 					    <header class="article-header post-details">
 						
 					    	<span class="post-date"><?php echo the_date( $d = '', $before = '', $after = '', $echo = true ); ?></span>
-					    	<a href="<?php get_the_excerpt() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+					    	<a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 						    	<h2><?php the_title(); ?></h2>
 					    	</a>
               
@@ -35,7 +35,14 @@ get_header(); ?>
 						    
 						    <?php 
 						    	if (in_category('mix')) {
-						    		echo do_shortcode('[soundcloud]' . get_the_excerpt() . '[/soundcloud]'); 
+
+						    		if (get_post_meta( $post->ID, 'exclusive_mix', true )) {
+						    			the_content();
+
+						    		} else {
+						    			echo do_shortcode('[soundcloud]' . get_the_excerpt() . '[/soundcloud]'); 
+						    		}
+
 						    	} else {
 						    		the_content();
 						    	}

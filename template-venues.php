@@ -10,9 +10,7 @@ get_header(); ?>
 
 	<div class="row content-margin">
 		<div class="span12">
-			<!-- <div class="title-graphic"></div>
-			<div class="title-ribbon"></div> -->
-			<h1 class="page-title">2014 Decibel Festival Venues <span class="h1-sub">MANY MORE TO COME</span></h1>
+			<h1 class="page-title">2014 Decibel Festival Venues</h1>
 		</div>
 	</div>
 

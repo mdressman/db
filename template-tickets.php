@@ -12,7 +12,8 @@ get_header(); ?>
 			<div class="span8 main-content">
 
 				<div class="page_content content-margin">
-				<?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+				<?php $i=0; if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
+					<?php if ($i==0) { ?>
 					<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				
 						<h1 class="entry-title"><?php the_title(); ?></h1>
@@ -22,6 +23,7 @@ get_header(); ?>
 						</div><!-- .entry-content -->
 					
 					</div><!-- #post-## -->
+					<?php } $i++; ?>
 				<?php endwhile; // end of the loop. ?>
 				</div>	
 			

@@ -23,8 +23,8 @@ get_header(); ?>
 					<a href="#" data-filter=".DJ">DJ</a> 
 					<span class="filter-label">/</span> 
 					<a href="#" data-filter=".Live">Live</a>
-					<!-- <span class="filter-label">/</span> 
-					<a href="#" data-filter=".Visual">Visual</a> -->
+					<span class="filter-label">/</span> 
+					<a href="#" data-filter=".Visual">Visual</a>
 					<span class="filter-label">/</span> 
 					<a href="#" data-filter="*" class="selected">All Artists</a> 
 				</p>

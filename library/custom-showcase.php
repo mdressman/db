@@ -76,7 +76,7 @@ function custom_showcase() {
 		$meta_boxes[] = array(
 			'id' => 'showcase_metabox',
 			'title' => 'Showcase Details',
-			'pages' => array('showcase'), // post type
+			'pages' => array('showcase','2014-showcase'), // post type
 			'context' => 'normal',
 			'priority' => 'high',
 			'show_names' => true, // Show field names on the left

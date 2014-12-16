@@ -2,12 +2,12 @@
 /**
  *
  * @package WordPress
- * @subpackage dBx
+ * @subpackage Decibel Festival
  */
 get_header(); ?>
 			
 	<div class="pagewrap container main-content showcase">
-		<div class="row">		
+		<div class="row">
 			<div class="span6">
 				<div class="page_content content-margin">
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -45,19 +45,19 @@ get_header(); ?>
 
 							switch($showcase_data['_showcase_date']) {
 								case "wednesday":
-									$date_heading = "Wednesday, September 25 2013";
+									$date_heading = "Wednesday, September 24 2014";
 									break;
 								case "thursday":
-									$date_heading = "Thursday, September 26 2013";
+									$date_heading = "Thursday, September 25 2014";
 									break;
 								case "friday":
-									$date_heading = "Friday, September 27 2013";
+									$date_heading = "Friday, September 26 2014";
 									break;
 								case "saturday":
-									$date_heading = "Saturday, September 28 2013";
+									$date_heading = "Saturday, September 27 2014";
 									break;
 								case "sunday":
-									$date_heading = "Sunday, September 29 2013";
+									$date_heading = "Sunday, September 28 2014";
 									break;	
 
 							}
@@ -96,7 +96,7 @@ get_header(); ?>
 
 						$connected_artists = new WP_Query( 
 												array(
-													'connected_type' => 'artists_to_showcases',
+													'connected_type' => 'artists_to_2014_showcases',
 													'connected_items' => get_queried_object(),
 													'nopaging' => true,
 												) 
@@ -142,7 +142,7 @@ get_header(); ?>
 								<a class="sidebar-button" href="<?php echo $showcase_data['_showcase_facebook_link'] ?>" target="_blank"><h1>FACEBOOK RSVP</h1></a>
 							</div>
 						</div>
-						<?php } ?>
+						<? } ?>
 
 						<?php if($showcase_data['_showcase_crateplayer_link']) { ?>
 						<div class="row">
@@ -150,7 +150,7 @@ get_header(); ?>
 								<a class="sidebar-button" href="<?php echo $showcase_data['_showcase_crateplayer_link'] ?>" target="_blank"><h1>Listen on CratePlayer</h1></a>
 							</div>
 						</div>
-						<?php } ?>
+						<? } ?>
 						
 						<?php
 							$event_type = get_post_type();
@@ -188,7 +188,7 @@ get_header(); ?>
 
 						$connected_venue = new WP_Query( 
 												array(
-													'connected_type' => 'showcase_to_venue',
+													'connected_type' => '2014_showcase_to_venue',
 													'connected_items' => get_queried_object(),
 													'nopaging' => true,
 												) 
@@ -215,7 +215,7 @@ get_header(); ?>
 							endif;
 						?>
 
-						<div class="row no-bottom">
+						<!-- <div class="row no-bottom">
 							<div class="span3">
 								<h1>Explore</h1>
 							</div>
@@ -255,7 +255,7 @@ get_header(); ?>
 							</div>
 
 
-						</div>
+						</div> -->
 
 
 

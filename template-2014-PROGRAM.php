@@ -19,13 +19,13 @@ get_header(); ?>
 			<div id="filters">
 				<p>
 					<span class="filter-label">Filter: </span>  
-					<a href="#" data-filter=".showcase">Showcase</a> 
+					<a href="#" data-filter=".showcase_2014">Showcase</a> 
 					<span class="filter-label">/</span> 
-					<a href="#" data-filter=".afterhours">After Hours</a>
+					<a href="#" data-filter=".afterhours_2014">After Hours</a>
 					<span class="filter-label">/</span> 
-					<a href="#" data-filter=".optical">Optical</a>
+					<a href="#" data-filter=".optical_2014">Optical</a>
 					<span class="filter-label">/</span> 
-					<a href="#" data-filter=".boatparty">Boat Party</a>
+					<a href="#" data-filter=".boatparty_2014">Boat Party</a>
 					<span class="filter-label">/</span> 
 					<a href="#" data-filter="*" class="selected">Full Program</a> 
 				</p>
@@ -74,7 +74,7 @@ get_header(); ?>
 				
 
 				<?php 
-					$post_types = array('showcase','afterhours','optical','boatparty');
+					$post_types = array('showcase_2014','afterhours_2014','optical_2014','boatparty_2014');
 					foreach($post_types as $post_type) {
 				?>
 
@@ -82,7 +82,6 @@ get_header(); ?>
 					<?php
 						$args = array(
 				            'post_type'=> $post_type,
-				            'cat' => 292,
 							'postsperpage' => -1,
 							'order' => 'ASC',
 							'meta_key' => '_' . $post_type . '_date',
@@ -119,8 +118,8 @@ get_header(); ?>
 							<p class="program-lineup">
 							<?php 
 
-								if ($post_type == 'showcase') {
-									$post_type = 'showcases';
+								if ($post_type == 'showcase_2014') {
+									$post_type = 'showcases_2014';
 								}
 
 								$connected_artists = new WP_Query( 
@@ -140,8 +139,8 @@ get_header(); ?>
 									$program_lineup .= ', ';
 								}
 
-								if ($post_type == 'showcases') {
-									$post_type = 'showcase';
+								if ($post_type == 'showcases_2014') {
+									$post_type = 'showcase_2014';
 								}
 
 							?>

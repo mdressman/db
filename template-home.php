@@ -10,15 +10,127 @@ get_header(); ?>
 
 	<div class="container">
 
-		<div class="row">
+		<!-- <div class="row">
 			<div class="span12">
 
-				<a href="http://dbfestival.com/db2014/lineup"><img src="<?php bloginfo( 'template_url' ); ?>/images/dB2014-Hero_July1-1170x400.png" class="hero-img" /></a>
+				<a href="http://dbfestival.com/db2014/lineup"><img src="http://dbfestival.com/wp-content/uploads/2014/09/Thank-YOU-HERO.png" class="hero-img" /></a>
 
-				
 			</div>
+		</div> -->
+
+		<div class="row home-subfeatures content-margin">
+			<div class="span5">
+				<h1>Events <span style="font-size: 11px;"> <a href="http://dbfestival.com/events">[ View All ]</a></span></h1>
+			</div>
+			<div class="span7 heading-spacer"></div>
 		</div>
+
+
+		<div class="row home-events">
+
+			<?php 		     
+                $now = time();
+                $args = array(
+                    'post_type'=> 'event',
+					'meta_key' => '_event_date',
+					'meta_value' => $now - (36 * 60 * 60), 
+                    'meta_compare' => '>',
+                    'orderby' => 'meta_value',
+                    'order'    => 'ASC',
+					'showposts' => 6
+                );
+                query_posts( $args );
+				$post_counter = 0;
+
+				if (have_posts()) : while (have_posts()) : the_post();
+
+				$event_fields = array('_event_date', '_event_tickets_link','_event_facebook_link');
+				$event_data = array();
+
+				foreach($event_fields as $event_field) {
+					$event_data[$event_field] = get_post_meta ($post->ID, $event_field, true);
+				}
+				$post_counter++;
+			?>
+
+			<div class="span4">
+			 	<div class="subfeature pad-me">
+		 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
+			    		
+			    		<div class="img-wrapper"><?php the_post_thumbnail( 'span4' ); ?></div>
+			    		<div class="subfeature-head">
+			    			<span class="event-date"><?php echo date("l, F j Y", $event_data['_event_date']) ?></span>
+			    			<h3><?php the_title(); ?></h3>
+			    		</div>
+			    	</a>
+			 	</div>
+			</div>
+
+			<?php
+				if ($post_counter % 3 == 0 ) {
+						echo "</div><div class='row'>";
+					}
+				endwhile; endif; 
+			?>
+		</div> 
 		
+		<!-- <div class="row home-subfeatures content-margin home-cta">
+			<div class="span4">
+				<div class="subfeature pad-me">
+					<a href="http://dbfestival.com/db2014/tickets" rel="bookmark" title="Tickets">
+						<div class="img-wrapper">
+							<h2>FESTIVAL PASSES AND INDIVIDUAL TICKETS</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="subfeature pad-me">
+					<a href="http://dbfestival.com/db2014/program" rel="bookmark" title="2014 Festival Program">
+						<div class="img-wrapper">
+							<h2>PROGRAM DETAILS AND AUDIO PLAYLISTS</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="subfeature pad-me">
+					<a href="http://schedule.dbfestival.com/schedule" rel="bookmark" title="SCHEDULE">
+						<div class="img-wrapper">
+							<h2>CREATE AND SHARE YOUR CUSTOM SCHEDULE</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="subfeature pad-me">
+					<a href="http://dbfestival.com/db2014/visitor-info" rel="bookmark" title="CONFERENCE">
+						<div class="img-wrapper">
+							<h2>VISITOR INFO</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="subfeature pad-me">
+					<a href="http://dbfestival.com/mixes" rel="bookmark" title="MIXES">
+						<div class="img-wrapper">
+							<h2>LISTEN TO EXCLUSIVE MIXES</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="span4">
+				<div class="subfeature pad-me">
+					<a href="http://dbfestival.com/work" rel="bookmark" title="VOLUNTEER">
+						<div class="img-wrapper">
+							<h2>GET INVOLVED WITH US</h2>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div> -->
+
 		<div class="row home-subfeatures content-margin">
 			<div class="span5">
 				<h1>News  <span style="font-size: 11px;"> <a href="http://dbfestival.com/news">[ View All ]</a></span></h1>
@@ -83,11 +195,11 @@ get_header(); ?>
 				endwhile; endif; 
 			?>
 
-		</div><!--row-->	
+		</div><!--row-->
 
 		<div class="row home-subfeatures content-margin">
 			<div class="span5">
-				<h1>Mixes and Live Series <span style="font-size: 11px;">[ Exclusives ]</span></h1>
+				<h1>Exclusive Mixes  <span style="font-size: 11px;"> <a href="http://dbfestival.com/mixes">[ View All ]</a></span></h1>
 			</div>
 			<div class="span7 heading-spacer"></div>
 		</div>
@@ -139,61 +251,6 @@ get_header(); ?>
 
 		</div><!--row-->	
 
-		<div class="row home-subfeatures content-margin">
-			<div class="span5">
-				<h1>Events <span style="font-size: 11px;"> <a href="http://dbfestival.com/events">[ View All ]</a></span></h1>
-			</div>
-			<div class="span7 heading-spacer"></div>
-		</div>
-
-
-		<div class="row home-events">
-
-			<?php 		     
-                $now = time();
-                $args = array(
-                    'post_type'=> 'event',
-					'meta_key' => '_event_date',
-					'meta_value' => $now - (36 * 60 * 60), 
-                    'meta_compare' => '>',
-                    'orderby' => 'meta_value',
-                    'order'    => 'ASC',
-					'showposts' => 3
-                );
-                query_posts( $args );
-				$post_counter = 0;
-
-				if (have_posts()) : while (have_posts()) : the_post();
-
-				$event_fields = array('_event_date', '_event_tickets_link','_event_facebook_link');
-				$event_data = array();
-
-				foreach($event_fields as $event_field) {
-					$event_data[$event_field] = get_post_meta ($post->ID, $event_field, true);
-				}
-				$post_counter++;
-			?>
-
-			<div class="span4">
-			 	<div class="subfeature pad-me">
-		 			<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-			    		
-			    		<div class="img-wrapper"><?php the_post_thumbnail( 'span4' ); ?></div>
-			    		<div class="subfeature-head">
-			    			<span class="event-date"><?php echo date("l, F j Y", $event_data['_event_date']) ?></span>
-			    			<h3><?php the_title(); ?></h3>
-			    		</div>
-			    	</a>
-			 	</div>
-			</div>
-
-			<?php
-				if ($post_counter % 3 == 0 ) {
-						echo "</div><div class='row'>";
-					}
-				endwhile; endif; 
-			?>
-		</div> 
 
 		<!-- <div class="row home-subfeatures content-margin">
 			<div class="span5">
