@@ -1,5 +1,6 @@
 <?php
 /**
+ * Single Post Template: Spotify Embed in Excerpt
  * @package WordPress
  * @subpackage Decibel Festival
  */
@@ -19,12 +20,6 @@ get_header(); ?>
                         ?>
                         <?php
                             echo "<h3>" . get_post_meta( $post->ID, 'feature_subhead', true ) . "</h3>";
-                        ?>
-
-                        <?php 
-                            if ( $post->post_excerpt ) {
-                                echo $post->post_excerpt;
-                            }
                         ?>
 
                         <div class="entry-content">
@@ -65,54 +60,7 @@ get_header(); ?>
 
             <div class="span4 content-margin event-sidebar">
                 <div class="row">
-                    <div class="span4">
-                        <?php
-                            if ( function_exists('dynamic_sidebar') && dynamic_sidebar('Blog') ) : else :
-                            endif;
-                        ?>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="span4">
-                        <div class="blogwidget">
-                            <h1 class="sidebar-title">Upcoming Events</h1>
-                                <ul>
-                                <?php
-                                    $now = time();
-                                    $args = array(
-                                        'post_type'=> 'event',
-                                        'meta_key' => '_event_date',
-                                        'meta_value' => $now - (36 * 60 * 60), 
-                                        'meta_compare' => '>',
-                                        'orderby' => 'meta_value',
-                                        'order'    => 'ASC',
-                                        'postsperpage' => -1
-                                    );
-                                    query_posts( $args );
-
-                                    if (have_posts()) : while (have_posts()) : the_post(); 
-
-                                    $event_fields = array('_event_date', '_event_tickets_link','_event_facebook_link');
-
-                                    $event_data = array();
-
-                                    foreach($event_fields as $event_field) {
-                                        $event_data[$event_field] = get_post_meta ($post->ID, $event_field, true);
-                                    }
-                                ?>
-
-                                <li>
-                                    <a href="<?php the_permalink(); ?>">
-                                        <span class="post-date"><?php echo date("m.d.Y", $event_data['_event_date']) ?></span>
-                                        <?php the_title(); ?>
-                                    </a>
-                                </li>
-
-                                <?php endwhile; endif; ?>
-                            </ul>
-                        </div>
-
-                    </div>
+                    <iframe src="<?php echo get_the_excerpt(); ?>" width="300" height="380" frameborder="0" allowtransparency="true"></iframe>
                 </div>
             </div>
         </div>
