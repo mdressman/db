@@ -1,8 +1,8 @@
 <?php
 /**
- * Template Name: 2014 Lineup
+ * Template Name: 2015 Lineup
  * @package WordPress
- * @subpackage dBx
+ * @subpackage Decibel Festival
  */
 get_header(); ?>
 
@@ -10,12 +10,11 @@ get_header(); ?>
 
 	<div class="row content-margin">
 		<div class="span12">
-			<h1 class="page-title">2014 Festival Lineup <span class="h1-sub">[in alphabetical order]</span></h1>
+			<h1 class="page-title">2015 Festival Lineup <span class="h1-sub">[in alphabetical order]</span></h1>
 		</div>
 	</div>
 
-	
-	<div class="row content-margin">
+	<!-- <div class="row content-margin">
 		<div class="span12">
 			<div id="filters">
 				<p>
@@ -30,7 +29,7 @@ get_header(); ?>
 				</p>
 		  	</div>
 		</div>
-	</div>
+	</div> -->
 
 	<div class="row" id="partner">
 		
@@ -39,8 +38,7 @@ get_header(); ?>
 			<div id="isotope-container">
 					<?php
 						$args = array(
-				            'post_type'=> 'artist',
-				            'cat' => 292,
+				            'post_type'=> 'artist_2015',
 							'postsperpage' => -1,
 							'orderby' => 'title',
 							'order' => 'ASC'
@@ -68,6 +66,5 @@ get_header(); ?>
 		</div>
 	</div>
 
-
-</div>	
+</div>
 <?php get_footer(); ?>

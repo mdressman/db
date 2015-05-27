@@ -35,12 +35,6 @@ function custom_venue() {
 			'supports' => array( 'title', 'editor', 'author', 'thumbnail', 'excerpt', 'trackbacks', 'custom-fields', 'comments', 'revisions', 'sticky')
 	 	) /* end of options */
 	); /* end of register post type */
-	
-	/* this adds your post categories to your custom post type */
-	register_taxonomy_for_object_type('category', 'venue');
-	/* this adds your post tags to your custom post type */
-	register_taxonomy_for_object_type('post_tag', 'venue');
-	
 } 
 
 	// adding the function to the Wordpress init

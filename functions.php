@@ -1,8 +1,5 @@
 <?php
 
-	
-
-
 /* THEME FEATURES */
 if (function_exists('add_theme_support')) {
     add_theme_support('menus');
@@ -25,24 +22,26 @@ require_once('library/custom-artist.php');
 require_once('library/custom-venue.php');
 require_once('library/custom-partner.php');
 
-require_once('library/custom-showcase.php'); 
-require_once('library/custom-afterhours.php'); 
-require_once('library/custom-boatparty.php'); 
-require_once('library/custom-optical.php'); 
-
 require_once('library/custom-showcase_2014.php'); 
 require_once('library/custom-afterhours_2014.php'); 
 require_once('library/custom-boatparty_2014.php'); 
 require_once('library/custom-optical_2014.php'); 
 
+require_once('library/2015-artist.php');
+require_once('library/2015-showcase.php');
+require_once('library/2015-afterhours.php');
+require_once('library/2015-optical.php');
+require_once('library/2015-boatparty.php');
+
 
 /* CUSTOM POST RELATIONSHIPS */
 
 function my_connection_types() {
+
 	p2p_register_connection_type( array(
-		'name' => 'artists_to_showcases',
-		'from' => 'artist',
-		'to' => 'showcase',
+		'name' => 'artists_to_showcases_2015',
+		'from' => 'artist_2015',
+		'to' => 'showcase_2015',
 		'sortable' => 'any',
 		'fields' => array(
 			'times' => array(
@@ -53,9 +52,9 @@ function my_connection_types() {
 	) );
 
 	p2p_register_connection_type( array(
-		'name' => 'artists_to_showcases_2014',
-		'from' => 'artist',
-		'to' => 'showcase_2014',
+		'name' => 'artists_to_afterhours_2015',
+		'from' => 'artist_2015',
+		'to' => 'afterhours_2015',
 		'sortable' => 'any',
 		'fields' => array(
 			'times' => array(
@@ -66,9 +65,23 @@ function my_connection_types() {
 	) );
 
 	p2p_register_connection_type( array(
-		'name' => 'artists_to_afterhours',
-		'from' => 'artist',
-		'to' => 'afterhours',
+		'name' => 'artists_to_optical_2015',
+		'from' => 'artist_2015',
+		'to' => 'optical_2015',
+		'sortable' => 'any',
+		'fields' => array(
+			'times' => array(
+				'title' => 'Set Times',
+				'type' => 'text',
+			),
+		)
+	) );
+
+
+	p2p_register_connection_type( array(
+		'name' => 'artists_to_boatparty_2015',
+		'from' => 'artist_2015',
+		'to' => 'boatparty_2015',
 		'sortable' => 'any',
 		'fields' => array(
 			'times' => array(
@@ -79,115 +92,28 @@ function my_connection_types() {
 	) );
 
 	p2p_register_connection_type( array(
-		'name' => 'artists_to_afterhours_2014',
-		'from' => 'artist',
-		'to' => 'afterhours_2014',
-		'sortable' => 'any',
-		'fields' => array(
-			'times' => array(
-				'title' => 'Set Times',
-				'type' => 'text',
-			),
-		)
+		'name' => 'showcase_2015_to_venue',
+		'from' => 'showcase_2015',
+		'to' => 'venue'
 	) );
 
-	p2p_register_connection_type( array(
-		'name' => 'artists_to_optical',
-		'from' => 'artist',
-		'to' => 'optical',
-		'sortable' => 'any',
-		'fields' => array(
-			'times' => array(
-				'title' => 'Set Times',
-				'type' => 'text',
-			),
-		)
-	) );
 
 	p2p_register_connection_type( array(
-		'name' => 'artists_to_optical_2014',
-		'from' => 'artist',
-		'to' => 'optical_2014',
-		'sortable' => 'any',
-		'fields' => array(
-			'times' => array(
-				'title' => 'Set Times',
-				'type' => 'text',
-			),
-		)
+		'name' => 'afterhours_2015_to_venue',
+		'from' => 'afterhours_2015',
+		'to' => 'venue'
 	) );
 
-	p2p_register_connection_type( array(
-		'name' => 'artists_to_boatparty',
-		'from' => 'artist',
-		'to' => 'boatparty',
-		'sortable' => 'any',
-		'fields' => array(
-			'times' => array(
-				'title' => 'Set Times',
-				'type' => 'text',
-			),
-		)
-	) );
 
 	p2p_register_connection_type( array(
-		'name' => 'artists_to_boatparty_2014',
-		'from' => 'artist',
-		'to' => 'boatparty_2014',
-		'sortable' => 'any',
-		'fields' => array(
-			'times' => array(
-				'title' => 'Set Times',
-				'type' => 'text',
-			),
-		)
-	) );
-
-	p2p_register_connection_type( array(
-		'name' => 'showcase_to_venue',
-		'from' => 'showcase',
+		'name' => 'optical_2015_to_venue',
+		'from' => 'optical_2015',
 		'to' => 'venue'
 	) );
 
 	p2p_register_connection_type( array(
-		'name' => 'showcase_2014_to_venue',
-		'from' => 'showcase_2014',
-		'to' => 'venue'
-	) );
-
-	p2p_register_connection_type( array(
-		'name' => 'afterhours_to_venue',
-		'from' => 'afterhours',
-		'to' => 'venue'
-	) );
-
-	p2p_register_connection_type( array(
-		'name' => 'afterhours_2014_to_venue',
-		'from' => 'afterhours_2014',
-		'to' => 'venue'
-	) );
-
-	p2p_register_connection_type( array(
-		'name' => 'optical_to_venue',
-		'from' => 'optical',
-		'to' => 'venue'
-	) );
-
-	p2p_register_connection_type( array(
-		'name' => 'optical_2014_to_venue',
-		'from' => 'optical_2014',
-		'to' => 'venue'
-	) );
-
-	p2p_register_connection_type( array(
-		'name' => 'boatparty_to_venue',
-		'from' => 'boatparty',
-		'to' => 'venue'
-	) );
-
-	p2p_register_connection_type( array(
-		'name' => 'boatparty_2014_to_venue',
-		'from' => 'boatparty_2014',
+		'name' => 'boatparty_2015_to_venue',
+		'from' => 'boatparty_2015',
 		'to' => 'venue'
 	) );
 }
@@ -198,9 +124,7 @@ add_action( 'p2p_init', 'my_connection_types' );
 register_nav_menus(
 	array(
 		'utility-nav' => __( 'The Utility Menu', 'dBx' ),
-		'dbx-utility-nav' => __( 'The Festival Utility Menu', 'dBx' ),
-		'365-nav' => __( 'The Portal Menu', 'dBx' ),
-		'main-nav' => __( 'The Main Menu', 'dBx' ),   
+		'365-nav' => __( 'The Portal Menu', 'dBx' ),  
 		'footer-links' => __( 'Footer Links', 'dBx' ) 
 	)
 );
@@ -363,17 +287,17 @@ function add_artist_column($defaults) {
     $defaults['artist_type'] = 'Artist Type';
     return $defaults;
 }
-add_filter('manage_artist_posts_columns' , 'add_artist_column');
+add_filter('manage_artist_2015_posts_columns' , 'add_artist_column');
 
 function custom_artist_column( $column_name, $post_id ) {
 	if ($column_name == 'artist_type') { 
 		echo get_post_meta( $post_id , '_artist_type' , true );
 	}
 }
-add_action( 'manage_artist_posts_custom_column' , 'custom_artist_column', 10, 2 );
+add_action( 'manage_artist_2015_posts_custom_column' , 'custom_artist_column', 10, 2 );
 
 /* SHORTCODES */
-function print_ind_ticket_links() {
+function print_ind_ticket_links_2015() {
 	$output = '';
 	$output .= '<div class="program-ticket-links">';
 
@@ -382,25 +306,25 @@ function print_ind_ticket_links() {
 	foreach ($days as $day) {
 		switch($day) {
 			case "wednesday":
-				$date_heading = "Wednesday, September 25 2013";
+				$date_heading = "Wednesday, September 23, 2015";
 				break;
 			case "thursday":
-				$date_heading = "Thursday, September 26 2013";
+				$date_heading = "Thursday, September 24, 2015";
 				break;
 			case "friday":
-				$date_heading = "Friday, September 27 2013";
+				$date_heading = "Friday, September 25, 2015";
 				break;
 			case "saturday":
-				$date_heading = "Saturday, September 28 2013";
+				$date_heading = "Saturday, September 26, 2015";
 				break;
 			case "sunday":
-				$date_heading = "Sunday, September 29 2013";
+				$date_heading = "Sunday, September 27, 2015";
 				break;	
 		}
 		$output .= '<h3>' . $date_heading . '</h3>';
 		
 
-		$post_types = array('showcase','afterhours','optical','boatparty');
+		$post_types = array('showcase_2015','afterhours_2015','optical_2015','boatparty_2015');
 		foreach($post_types as $post_type) {
 			$args = array(
 	            'post_type'=> $post_type,
@@ -478,114 +402,7 @@ function print_ind_ticket_links() {
 
 	return $output;
 }
-add_shortcode('program_ticket_links', 'print_ind_ticket_links');  
-
-function print_ind_ticket_links_2014() {
-	$output = '';
-	$output .= '<div class="program-ticket-links">';
-
-	$days = array('wednesday','thursday','friday','saturday','sunday');
-	
-	foreach ($days as $day) {
-		switch($day) {
-			case "wednesday":
-				$date_heading = "Wednesday, September 24, 2014";
-				break;
-			case "thursday":
-				$date_heading = "Thursday, September 25, 2014";
-				break;
-			case "friday":
-				$date_heading = "Friday, September 26, 2014";
-				break;
-			case "saturday":
-				$date_heading = "Saturday, September 27, 2014";
-				break;
-			case "sunday":
-				$date_heading = "Sunday, September 28, 2014";
-				break;	
-		}
-		$output .= '<h3>' . $date_heading . '</h3>';
-		
-
-		$post_types = array('showcase_2014','afterhours_2014','optical_2014','boatparty_2014');
-		foreach($post_types as $post_type) {
-			$args = array(
-	            'post_type'=> $post_type,
-				'postsperpage' => -1,
-				'order' => 'ASC',
-				'meta_key' => '_' . $post_type . '_date',
-				'meta_value' => $day,
-				'meta_compare' => '='
-	        );
-	        query_posts( $args );
-
-	        if (have_posts()) : while (have_posts()) : the_post(); 
-
-		        $event_type = get_post_type();
-				$event_type_obj = get_post_type_object( $event_type );
-				$event_type_name = $event_type_obj->labels->singular_name;
-
-				$tickets_link = get_post_meta (get_the_ID(), '_' . $post_type . '_tickets_link', true);
-				$sold_out = get_post_meta (get_the_ID(), '_' . $post_type . '_soldout', true);
-
-				$ticket_info = '';
-				$title_link = '';
-				if ($sold_out) {
-					$ticket_info = '<strong>Sold Out</strong> (but you can still get in with a <a href="http://dbfestival.strangertickets.com" target="_blank">festival pass</a>)';
-					$title_link = 'http://dbfestival.strangertickets.com';
-				} else {
-					$ticket_info = '<a href="' . $tickets_link . '" target="_blank"><img src="http://dbfestival.com/images/buy_tickets.png" style="border-bottom:none;" /></a>';
-					$title_link = $tickets_link;
-				}
-
-				$event_title = get_the_title();
-				$event_start_time = get_post_meta (get_the_ID(), '_' . $post_type . '_start_time', true);
-				$event_age = get_post_meta (get_the_ID(), '_' . $post_type . '_age', true);
-
-				
-				$connected_venue = new WP_Query( 
-										array(
-											'connected_type' => $post_type . '_to_venue',
-											'connected_items' => get_the_ID(),
-											'nopaging' => true,
-										) 
-									);
-
-
-				if ( $connected_venue->have_posts() ) :
-					while ( $connected_venue->have_posts() ) : $connected_venue->the_post();
-
-				$venue_name = get_the_title();
-
-				endwhile; 
-				wp_reset_postdata();
-				endif;
-
-				$output .= '<p><a href="' . $title_link . '" target="_blank">' 
-							. $event_title . '</a> / ' 
-							. $event_type_name . ' / '
-							. $event_age . ' / '
-							. $event_start_time . ' / '
-							. $venue_name . ' / '
-							. $ticket_info
-							. '</p>';
-
-
-				
-
-			endwhile; endif;	
-		}
-
-		
-
-	}
-	$output .= '</div>';
-
-
-
-	return $output;
-}
-add_shortcode('2014_program_ticket_links', 'print_ind_ticket_links_2014');  
+add_shortcode('2015_program_ticket_links', 'print_ind_ticket_links_2015');  
 
 
 

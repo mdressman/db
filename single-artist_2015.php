@@ -2,7 +2,7 @@
 /**
  *
  * @package WordPress
- * @subpackage dBx
+ * @subpackage Decibel Festival
  */
 get_header(); ?>
 			
@@ -74,7 +74,7 @@ get_header(); ?>
 
 							<?php 
 
-								$connections = array('artists_to_showcases_2014','artists_to_afterhours_2014','artists_to_optical_2014','artists_to_boatparty_2014');
+								$connections = array('artists_to_showcases_2015','artists_to_afterhours_2015','artists_to_optical_2015','artists_to_boatparty_2015');
 								foreach ($connections as $connection) {
 
 									$connected_showcases = new WP_Query( 
@@ -109,17 +109,17 @@ get_header(); ?>
 							<?php 
 
 								switch($connection) {
-									case "artists_to_showcases_2014":
-										$event_type = "showcase_2014";
+									case "artists_to_showcases_2015":
+										$event_type = "showcase_2015";
 										break;
-									case "artists_to_afterhours_2014":
-										$event_type = "afterhours_2014";
+									case "artists_to_afterhours_2015":
+										$event_type = "afterhours_2015";
 										break;
-									case "artists_to_optical_2014":
-										$event_type = "optical_2014";
+									case "artists_to_optical_2015":
+										$event_type = "optical_2015";
 										break;
-									case "artists_to_boatparty_2014":
-										$event_type = "boatparty_2014";
+									case "artists_to_boatparty_2015":
+										$event_type = "boatparty_2015";
 										break;
 
 								}
@@ -128,19 +128,19 @@ get_header(); ?>
 
 								switch($showcase_date) {
 									case "wednesday":
-										$date_heading = "Wednesday, September 24 2014";
+										$date_heading = "Wednesday, September 24 2015";
 										break;
 									case "thursday":
-										$date_heading = "Thursday, September 25 2014";
+										$date_heading = "Thursday, September 25 2015";
 										break;
 									case "friday":
-										$date_heading = "Friday, September 26 2014";
+										$date_heading = "Friday, September 26 2015";
 										break;
 									case "saturday":
-										$date_heading = "Saturday, September 27 2014";
+										$date_heading = "Saturday, September 27 2015";
 										break;
 									case "sunday":
-										$date_heading = "Sunday, September 28 2014";
+										$date_heading = "Sunday, September 28 2015";
 										break;	
 
 								}

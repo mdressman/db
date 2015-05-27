@@ -129,10 +129,4 @@
 			</div>
 		</div>
 
-		<?php if (is_page( 'rbma-2312-invitation' )) { ?>
-		<div class="container" id="rbma-2312-wrapper">
-		<?php } elseif (!in_category( 'rbma' )) { ?>
 		<div class="container" id="wrapper">
-		<?php } else { ?>
-		<div class="container" id="rbma-wrapper">
-		<?php } ?>

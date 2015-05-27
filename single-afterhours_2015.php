@@ -14,12 +14,12 @@ get_header(); ?>
 
 			    <?php 
 									
-					$afterhours_2014_fields = array('_afterhours_2014_date', '_afterhours_2014_tickets_link','_afterhours_2014_facebook_link','_afterhours_2014_crateplayer_link','_afterhours_2014_soldout');
+					$afterhours_2015_fields = array('_afterhours_2015_date', '_afterhours_2015_tickets_link','_afterhours_2015_facebook_link','_afterhours_2015_crateplayer_link','_afterhours_2015_soldout');
 
-					$afterhours_2014_data = array();
+					$afterhours_2015_data = array();
 
-					foreach($afterhours_2014_fields as $afterhours_2014_field) {
-						$afterhours_2014_data[$afterhours_2014_field] = get_post_meta ($post->ID, $afterhours_2014_field, true);
+					foreach($afterhours_2015_fields as $afterhours_2015_field) {
+						$afterhours_2015_data[$afterhours_2015_field] = get_post_meta ($post->ID, $afterhours_2015_field, true);
 					}
 		
 				?>
@@ -32,21 +32,21 @@ get_header(); ?>
 							$event_type_obj = get_post_type_object( $event_type );
 							$event_type_name = $event_type_obj->labels->singular_name;
 
-							switch($afterhours_2014_data['_afterhours_2014_date']) {
+							switch($afterhours_2015_data['_afterhours_2015_date']) {
 								case "wednesday":
-									$date_heading = "Wednesday, September 24 2014";
+									$date_heading = "Wednesday, September 24 2015";
 									break;
 								case "thursday":
-									$date_heading = "Thursday, September 25 2014";
+									$date_heading = "Thursday, September 25 2015";
 									break;
 								case "friday":
-									$date_heading = "Friday, September 26 2014";
+									$date_heading = "Friday, September 26 2015";
 									break;
 								case "saturday":
-									$date_heading = "Saturday, September 27 2014";
+									$date_heading = "Saturday, September 27 2015";
 									break;
 								case "sunday":
-									$date_heading = "Sunday, September 28 2014";
+									$date_heading = "Sunday, September 28 2015";
 									break;	
 
 							}
@@ -54,7 +54,7 @@ get_header(); ?>
 
 						<h1 class="top-title"><?php the_title(); ?> // <?php echo $event_type_name; ?></h1>
 
-						<?php if($afterhours_2014_data['_afterhours_2014_date']) { ?>
+						<?php if($afterhours_2015_data['_afterhours_2015_date']) { ?>
 							<h2><?php echo $date_heading; ?></h2>
 						<?php } ?>
 						
@@ -85,7 +85,7 @@ get_header(); ?>
 
 						$connected_artists = new WP_Query( 
 												array(
-													'connected_type' => 'artists_to_afterhours_2014',
+													'connected_type' => 'artists_to_afterhours_2015',
 													'connected_items' => get_queried_object(),
 													'nopaging' => true,
 												) 
@@ -114,7 +114,7 @@ get_header(); ?>
 
 						$connected_venue = new WP_Query( 
 												array(
-													'connected_type' => 'afterhours_2014_to_venue',
+													'connected_type' => 'afterhours_2015_to_venue',
 													'connected_items' => get_queried_object(),
 													'nopaging' => true,
 												) 
@@ -149,29 +149,29 @@ get_header(); ?>
 								
 								<?php 
 
-								if($afterhours_2014_data['_afterhours_2014_crateplayer_link']) {
-									echo do_shortcode('[soundcloud]' . $afterhours_2014_data['_afterhours_2014_crateplayer_link'] . '[/soundcloud]');
+								if($afterhours_2015_data['_afterhours_2015_crateplayer_link']) {
+									echo do_shortcode('[soundcloud]' . $afterhours_2015_data['_afterhours_2015_crateplayer_link'] . '[/soundcloud]');
 								}
 								?>
 							</div>
 						</div>
 
-						<?php if($afterhours_2014_data['_afterhours_2014_tickets_link']) { ?>
+						<?php if($afterhours_2015_data['_afterhours_2015_tickets_link']) { ?>
 						<div class="row">
 							<div class="span3">
-								<?php if($afterhours_2014_data['_afterhours_2014_soldout']) { ?>
+								<?php if($afterhours_2015_data['_afterhours_2015_soldout']) { ?>
 									<a class="sidebar-button" href="http://dbfestival.strangertickets.com" target="_blank"><h1>SOLD OUT <br/> <span style="font-size:10px;">(but you can still get a db pass)</span></h1></a>
 								<?php } else { ?>
-									<a class="sidebar-button" href="<?php echo $afterhours_2014_data['_afterhours_2014_tickets_link'] ?>" target="_blank"><h1>BUY TICKETS</h1></a>
+									<a class="sidebar-button" href="<?php echo $afterhours_2015_data['_afterhours_2015_tickets_link'] ?>" target="_blank"><h1>BUY TICKETS</h1></a>
 								<?php } ?>		
 							</div>
 						</div>
 						<?php } ?>
 
-						<?php if($afterhours_2014_data['_afterhours_2014_facebook_link']) { ?>
+						<?php if($afterhours_2015_data['_afterhours_2015_facebook_link']) { ?>
 						<div class="row">
 							<div class="span3">
-								<a class="sidebar-button" href="<?php echo $afterhours_2014_data['_afterhours_2014_facebook_link'] ?>" target="_blank"><h1>FACEBOOK RSVP</h1></a>
+								<a class="sidebar-button" href="<?php echo $afterhours_2015_data['_afterhours_2015_facebook_link'] ?>" target="_blank"><h1>FACEBOOK RSVP</h1></a>
 							</div>
 						</div>
 						<?php } ?>

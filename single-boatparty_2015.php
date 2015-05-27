@@ -13,13 +13,13 @@ get_header(); ?>
 			    <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 			    <?php 
-									
-					$showcase_2014_fields = array('_showcase_2014_date', '_showcase_2014_tickets_link','_showcase_2014_facebook_link','_showcase_2014_crateplayer_link','_showcase_2014_soldout');
 
-					$showcase_2014_data = array();
+					$boatparty_2015_fields = array('_boatparty_2015_date', '_boatparty_2015_tickets_link','_boatparty_2015_facebook_link','_boatparty_2015_crateplayer_link','_boatparty_2015_soldout');
 
-					foreach($showcase_2014_fields as $showcase_2014_field) {
-						$showcase_2014_data[$showcase_2014_field] = get_post_meta($post->ID, $showcase_2014_field, true);
+					$boatparty_2015_data = array();
+
+					foreach($boatparty_2015_fields as $boatparty_2015_field) {
+						$boatparty_2015_data[$boatparty_2015_field] = get_post_meta ($post->ID, $boatparty_2015_field, true);
 					}
 		
 				?>
@@ -32,21 +32,21 @@ get_header(); ?>
 							$event_type_obj = get_post_type_object( $event_type );
 							$event_type_name = $event_type_obj->labels->singular_name;
 
-							switch($showcase_2014_data['_showcase_2014_date']) {
+							switch($boatparty_2015_data['_boatparty_2015_date']) {
 								case "wednesday":
-									$date_heading = "Wednesday, September 24 2014";
+									$date_heading = "Wednesday, September 24 2015";
 									break;
 								case "thursday":
-									$date_heading = "Thursday, September 25 2014";
+									$date_heading = "Thursday, September 25 2015";
 									break;
 								case "friday":
-									$date_heading = "Friday, September 26 2014";
+									$date_heading = "Friday, September 26 2015";
 									break;
 								case "saturday":
-									$date_heading = "Saturday, September 27 2014";
+									$date_heading = "Saturday, September 27 2015";
 									break;
 								case "sunday":
-									$date_heading = "Sunday, September 28 2014";
+									$date_heading = "Sunday, September 28 2015";
 									break;	
 
 							}
@@ -54,8 +54,8 @@ get_header(); ?>
 
 						<h1 class="top-title"><?php the_title(); ?> // <?php echo $event_type_name; ?></h1>
 
-						<?php if($showcase_2014_data['_showcase_2014_date']) { ?>
-							<h2 class="artist-showcase"><?php echo $date_heading; ?></h2>
+						<?php if($boatparty_2015_data['_boatparty_2015_date']) { ?>
+							<h2><?php echo $date_heading; ?></h2>
 						<?php } ?>
 						
 						<?php the_post_thumbnail( 'full' ); ?>
@@ -85,7 +85,7 @@ get_header(); ?>
 
 						$connected_artists = new WP_Query( 
 												array(
-													'connected_type' => 'artists_to_showcases_2014',
+													'connected_type' => 'artists_to_boatparty_2015',
 													'connected_items' => get_queried_object(),
 													'nopaging' => true,
 												) 
@@ -114,7 +114,7 @@ get_header(); ?>
 
 						$connected_venue = new WP_Query( 
 												array(
-													'connected_type' => 'showcase_2014_to_venue',
+													'connected_type' => 'boatparty_2015_to_venue',
 													'connected_items' => get_queried_object(),
 													'nopaging' => true,
 												) 
@@ -149,33 +149,32 @@ get_header(); ?>
 								
 								<?php 
 
-								if($showcase_2014_data['_showcase_2014_crateplayer_link']) {
-									echo do_shortcode('[soundcloud]' . $showcase_2014_data['_showcase_2014_crateplayer_link'] . '[/soundcloud]');
+								if($boatparty_2015_data['_boatparty_2015_crateplayer_link']) {
+									echo do_shortcode('[soundcloud]' . $boatparty_2015_data['_boatparty_2015_crateplayer_link'] . '[/soundcloud]');
 								}
 								?>
 							</div>
 						</div>
 
-						<?php if($showcase_2014_data['_showcase_2014_tickets_link']) { ?>
+						<?php if($boatparty_2015_data['_boatparty_2015_tickets_link']) { ?>
 						<div class="row">
 							<div class="span3">
-								<?php if($showcase_2014_data['_showcase_2014_soldout']) { ?>
+								<?php if($boatparty_2015_data['_boatparty_2015_soldout']) { ?>
 									<a class="sidebar-button" href="http://dbfestival.strangertickets.com" target="_blank"><h1>SOLD OUT <br/> <span style="font-size:10px;">(but you can still get a db pass)</span></h1></a>
 								<?php } else { ?>
-									<a class="sidebar-button" href="<?php echo $showcase_2014_data['_showcase_2014_tickets_link'] ?>" target="_blank"><h1>BUY TICKETS</h1></a>
-								<?php } ?>
+									<a class="sidebar-button" href="<?php echo $boatparty_2015_data['_boatparty_2015_tickets_link'] ?>" target="_blank"><h1>BUY TICKETS</h1></a>
+								<?php } ?>		
 							</div>
 						</div>
 						<?php } ?>
 
-						<?php if($showcase_2014_data['_showcase_2014_facebook_link']) { ?>
+						<?php if($boatparty_2015_data['_boatparty_2015_facebook_link']) { ?>
 						<div class="row">
 							<div class="span3">
-								<a class="sidebar-button" href="<?php echo $showcase_2014_data['_showcase_2014_facebook_link'] ?>" target="_blank"><h1>FACEBOOK RSVP</h1></a>
+								<a class="sidebar-button" href="<?php echo $boatparty_2015_data['_boatparty_2015_facebook_link'] ?>" target="_blank"><h1>FACEBOOK RSVP</h1></a>
 							</div>
 						</div>
 						<?php } ?>
-
 
 						<?php
 							$event_type = get_post_type();
