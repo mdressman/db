@@ -2,7 +2,7 @@
 /**
  * Template Name: Venues
  * @package WordPress
- * @subpackage dBx
+ * @subpackage Decibel Festival
  */
 get_header(); ?>
 
@@ -10,7 +10,7 @@ get_header(); ?>
 
 	<div class="row content-margin">
 		<div class="span12">
-			<h1 class="page-title">2014 Decibel Festival Venues</h1>
+			<h1 class="page-title">2015 Decibel Festival Venues</h1>
 		</div>
 	</div>
 
@@ -18,8 +18,6 @@ get_header(); ?>
 	<div class="row content-margin" id="venue">
 		<div class="span12">
 			<div class="row">
-	
-	
 
 	<?php
 		$args = array(
