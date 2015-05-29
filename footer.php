@@ -1,4 +1,16 @@
 
+<footer class="main-footer">
+	<div class="footer-icons">
+		<a href="http://facebook.com/DecibelFestival" class="footer-icon icon-fb" target="_blank" alt="Facebook" title="Facebook"></a>
+		<a href="http://twitter.com/dBFestival" class="footer-icon icon-tw" target="_blank" alt="Twitter" title="Twitter"></a>
+		<a href="http://youtube.com/DecibelFestival" class="footer-icon icon-yt" target="_blank" alt="YouTube" title="YouTube"></a>
+		<a href="http://soundcloud.com/decibelfestival" class="footer-icon icon-sc" target="_blank" alt="Soundcloud" title="Soundcloud"></a>
+		<a href="http://open.spotify.com/user/decibelfestival/playlist/6sHwzjowBgYBuA7fhQrqbU" class="footer-icon icon-sp" target="_blank" alt="Spotify" title="Spotify"></a>
+		<a href="http://www.crateplayer.com/decibelfestival" class="footer-icon icon-crate" target="_blank" alt="CratePlayer" title="CratePlayer"></a>
+	</div>
+</footer>
+
+<!--
 <div id="footer" class="container">
 
 	<?php if (false) { // if (false !== strpos($_SERVER['REQUEST_URI'],'dbx')) { // yes festival page ?>
@@ -40,6 +52,7 @@
 				<!-- <?php if ( function_exists('dynamic_sidebar') && dynamic_sidebar('ConstantContact') ) : else :
 					endif;
 				?> -->
+				<!--
 			</div>
 
 			<div class="footericons">
@@ -61,6 +74,8 @@
 	</div>
 </div>
 
+-->
+
     <!-- Le javascript
     ================================================== -->
    
@@ -71,6 +86,7 @@
     <script src="<?php bloginfo( 'template_url' ); ?>/js/twitlive-min.js"></script>
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.color-2.1.1.min.js"></script>
     <script src="<?php bloginfo( 'template_url' ); ?>/js/jquery.isotope.min.js"></script>
+    <script src="<?php bloginfo( 'template_url' ); ?>/js/parallax.min.js"></script>
 
     <script type="text/javascript" src="<?php bloginfo( 'template_url' ); ?>/functions.js"></script>
 	
