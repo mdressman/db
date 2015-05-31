@@ -156,7 +156,6 @@ a:hover {
 }
 
 h1, h2 {
-    color: #FFFFFF;
     text-transform: uppercase;
     /*background: #cc3333;*/
     padding: 5px 0 5px 0;
@@ -2221,6 +2220,8 @@ a.decibelbtn {
     display: inline-block;
     border-right: 1px solid #fff;
     height: 100%;
+    width: 150px;
+    margin-left: -4px;
 }
 
 .header-nav-list li a {
@@ -2229,7 +2230,7 @@ a.decibelbtn {
     color: inherit;
     padding: 25px;
     letter-spacing: 2px;
-    width: 100px;
+
 }
 
 .header-nav-list li:hover {
@@ -2244,7 +2245,6 @@ a.decibelbtn {
 
 .fullscreen-section {
     height: 100vh;
-    background-color: #61FFC8;
     position: relative;
 }
 
@@ -2281,3 +2281,65 @@ a.decibelbtn {
     background-size: 65px 65px;
     margin: 0;
 }
+
+/* Events */
+
+.upcoming-page {
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.upcoming-title {
+    letter-spacing: 1px;
+    margin: 50px 0;
+}
+
+.event-container {
+    height: 280px;
+}
+
+.event-info-container {
+    text-transform: uppercase;
+    font-family: 'Futura',sans-serif;
+    font-weight: 300;
+}
+
+.event-date-big {
+    font-size: 170px;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.event-artist {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.event-photo-container {
+    height: 100%;
+}
+
+.event-photo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Utilities */
+
+.section-hr {
+    width: 30px;
+    color: #000;
+    margin: 0 0 24px;
+    border-top: 1px solid #000;
+}
+
+.bg-mint {
+    background-color: #61FFC8;
+}
+
+.bg-grey {
+    background-color: #F2F2F2;
+}
+

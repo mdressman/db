@@ -28,9 +28,9 @@ $(document).ready(function(){
 
 	var docked = false;
 	var $headerNav = $('.home-header-nav');
-	var offset = $headerNav.offset().top;
 
-	if (!isMobile.any()) {
+	if (!isMobile.any() && $headerNav.size()) {
+		var offset = $headerNav.offset().top;
 		$(window).scroll(function () {
 			if (!docked && ($headerNav.offset().top - $("body").scrollTop() < 0)) {
 				$headerNav.find(".nav-logo").css('opacity', 1);

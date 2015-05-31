@@ -30,11 +30,11 @@
         <meta property="og:site_name" content="Decibel Festival" />
 
 
-
         <link href="<?php bloginfo( 'template_url' ); ?>/bootstrap/css/bootstrap.css" rel="stylesheet">
         <link href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" rel="stylesheet">
         <link href="<?php bloginfo( 'template_url' ); ?>/css/nivo-slider.css" rel="stylesheet">
         <link href="<?php bloginfo( 'template_url' ); ?>/css/nivo/default.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
         <!--[if lt IE 9]>
           <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>

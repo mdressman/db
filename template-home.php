@@ -7,7 +7,7 @@
 
 get_header("home"); ?>
 
-	<div class="fullscreen-section">
+	<div class="fullscreen-section bg-mint">
 		<div class="tickets-container">
 			<button class="lineup-tickets-btn">Buy tickets</button>
 		</div>
