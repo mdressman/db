@@ -8,6 +8,8 @@ Version: 1.0
 License: GNU General License
 */
 
+/* new color scheme: #61FFC8(97,255,200), #3D49A6(61,73,166) */
+
 @font-face {
     font-family: 'Futura';
     src: url('fonts/FuturaLT.ttf') format('truetype');
@@ -41,24 +43,25 @@ License: GNU General License
 }
 
 body {	
-    background: #999999  url(images/bg-clean.jpg) repeat;
+    background: #F2F2F2;
     font-family: 'Futura', sans-serif;
-    color: #111111;
+    color: #000;
     margin: 0;
     padding: 0;
     }
 
 #wrapper {
-    background: #999999 url(images/bg-topography-only.png) top center repeat;
+    /*background: #999999 url(images/bg-topography-only.png) top center repeat;*/
     /*background: #999999;*/
+    background: #F2F2F2;
 }
 
 #rbma-wrapper {
-    background: #111111 url(images/rbma_bg.jpg) top left repeat;
+    background: #FFFFFF url(images/rbma_bg.jpg) top left repeat;
 }
 
 #rbma-2312-wrapper {
-    background: #111111 url(images/rbma-2312-bg.jpg) top left repeat;
+    background: #FFFFFF url(images/rbma-2312-bg.jpg) top left repeat;
 }
 
 #rbma-2312-wrapper .page_content, #rbma-2312-wrapper .rbma-content {
@@ -109,7 +112,7 @@ color: #00a3dc !important;
 }
 
 .ss-q-title {
-    color: #333333 !important;
+    color: #F2F2F2 !important;
 }
 
 /*.main-content {
@@ -131,7 +134,7 @@ img {
 }
 
 a {
-    color: #333333;
+    color: #F2F2F2;
     letter-spacing: 1px;
 }
 
@@ -149,11 +152,10 @@ ul {
 
 a:hover {
     text-decoration: none;
-    color: #111111;
+    color: #FFFFFF;
 }
 
 h1, h2 {
-    color: #111111;
     text-transform: uppercase;
     /*background: #cc3333;*/
     padding: 5px 0 5px 0;
@@ -174,7 +176,7 @@ h1.page-title {
 h1.page-title span.h1-sub {
     font-size: 14px;
     font-style: italic;
-    color: #111111;
+    color: #FFFFFF;
     letter-spacing: 1px;
     float: right;
     margin-right: 20px;
@@ -195,21 +197,22 @@ h2.partner-section-title {
 }
 
 .logo {
-    position: relative;
+    position: absolute;
     float: left;
     display: block;
-    margin: 5px 0;
+    margin: 0;
 }
         
 
 
 
 #nav-wrapper {
-    background: #00ffab;
-    box-shadow: 1px 6px 15px #393939;
+    background: #0A0F28;
+    box-shadow: 1px 2px 10px #393939;
     height: 64px;
     z-index: 999999999;
     margin: 0 -8px 0 -8px;
+    opacity: 0;
 }    
 
 
@@ -224,7 +227,7 @@ h2.partner-section-title {
     }
 
     .nav_bar .container {
-        background: #111111;
+        background: #FFFFFF;
     }
 
 
@@ -236,8 +239,8 @@ h2.partner-section-title {
 
 #primary_nav .nav {
     /*background: transparent url(images/gradiant_pink.png) center top;*/
-    background: #5ac4a9;
-    margin-top:28px;
+    background: #61FFC8;
+    margin-top: 28px;
     margin-bottom: 0;
     padding: 0 20px;
     box-shadow: 1px 4px 10px #393939;
@@ -294,7 +297,7 @@ ul.nav li {
 
 ul.nav li:hover, ul.nav li a:hover, ul.nav li a:focus {
     color: #ffffff;
-    /*background: #111111; */
+    /*background: #FFFFFF; */
 }
 
 ul.nav li ul.sub-menu,
@@ -363,7 +366,7 @@ ul.nav li ul.children li.current-page-ancestor a */{
 #menu-utility li.current_page_item,
 #menu-utility li.current-menu-item,
 #menu-utility li.current_page_item {
-    border-top: 2px solid #00FFAB !important;
+    border-top: 2px solid #61FFC8 !important;
 
 }
 
@@ -431,7 +434,7 @@ ul.nav li.current_page_item .sub-menu a {
 }
 
 #utility_nav li:hover {
-    border-top: 2px solid #00ffab;
+    border-top: 2px solid #61FFC8;
 }
 
 #utility_nav ul li a {
@@ -445,12 +448,21 @@ ul.nav li.current_page_item .sub-menu a {
 }
 
 .fix { 
-    position: fixed !important; top: 0; z-index: 1000; 
+    position: fixed !important; 
+    top: 0; 
+    z-index: 1000;
+    background: transparent url(images/db2015-website-header.png) repeat;
+    background-size: cover;
+    background-position: bottom; 
+    background-color: #61FFC8;
+    transition: background .2s ease;
 }
+
 #nav-wrapper.fix {
     margin: 0 -8px;
-    width: inherit;
+    width: 100%;
     padding-right: 16px;
+    opacity: 1;
 }
 
 #nav-wrapper.fix .nav {
@@ -474,7 +486,7 @@ ul.nav li.current_page_item .sub-menu a {
 }
 
 .subfeature a h3, .showcase-artist a h3 {
-    color: #111111;
+    color: #000;
     text-transform: uppercase;
     font-size: 18px;
     line-height: 1.6em;
@@ -492,20 +504,14 @@ ul.nav li.current_page_item .sub-menu a {
 .subfeature a img, .showcase-artist a img, .post-details img {
     margin-left: 0;
     /*margin-bottom: 5px;*/
-    opacity: 0.6;
     /*border: 1px solid #00FFAB;*/
     
     box-shadow: 1px 4px 10px #393939;
-
-    -webkit-filter: grayscale(1);
-    -webkit-filter: grayscale(100%);
-    -moz-filter: grayscale(100%);
-    filter: gray; filter: grayscale(100%);
 }
 
 .img-wrapper {
     float: left;
-    border: 1px solid #00FFAB;
+    border: 1px solid #61FFC8;
     margin-bottom: 6px;
 }
 
@@ -533,7 +539,7 @@ span[class^="st"] {
 }
 
 .subfeature a:hover h3 {
-    color: #333333;
+    color: #636DBA;
 }
 
 
@@ -544,7 +550,7 @@ span[class^="st"] {
 
 .subfeature p.venue-address{
     font-size: 14px;
-    color: #111111;
+    color: #FFFFFF;
 }
 
 .subfeature p.venue-desc, p.showcase-settimes {
@@ -598,7 +604,7 @@ h1.cleaner-content-heading {
     font-style: normal;
     /*font-weight: bold;*/
     font-size: 14px;
-    color: #111111;
+    color: #FFFFFF;
     /*padding-left: 20px;*/
     margin: 0;
     background: #999999;
@@ -612,7 +618,7 @@ h1.cleaner-content-heading {
     font-style: normal;
     font-weight: bold;
     font-size: 14px;
-    color: #111111;
+    color: #FFFFFF;
     padding-left: 20px;
     margin-top: 0;
 
@@ -629,13 +635,13 @@ h1.cleaner-content-heading {
 .subfeature p.program-event-type {
     font-size: 16px;
     font-style: italic;
-    color: #111111;
+    color: #FFFFFF;
     margin-bottom: 0;
 }
 
 .subfeature span.program-venue {
     font-size: 14px;
-    color: #111111;
+    color: #FFFFFF;
 }
 
 .subfeature p.program-lineup {
@@ -660,7 +666,7 @@ div.program-ticket-links p {
 
 .db-label {
     background: none;
-    color: #111111;
+    color: #FFFFFF;
     font-size: 12px;
     font-style: italic;
 }
@@ -675,7 +681,7 @@ div.program-ticket-links p {
     text-align: center;
     height: 36px;
     background: #393939;
-    color: #00ffab;
+    color: #61FFC8;
     padding: 40px 20px;
     font-style: italic;
     opacity: 0.8;
@@ -734,13 +740,13 @@ div.rbma-content div div div ul li.crpw-item {
 
 h1.content-heading .home-fest-dates {
     font-style: italic;
-    color: #111111;
+    color: #FFFFFF;
     font-size: 14px;
     float: right;
 }
 
 .home-subfeatures h1, .social-feeds h1, .social-feeds h3, .page_content h1.top-title {
-    background: #00FFAB;
+    background: #0A0F28;
     font-size: 16px;
     
     margin-left: -8px;
@@ -757,10 +763,10 @@ h1.content-heading .home-fest-dates {
 }
 
 .home-subfeatures h1 a {
-    color: #ffffff;
+    color: #61FFC8;
 }
 .home-subfeatures h1 a:hover {
-    color: #111111;
+    color: #FFFFFF;
 }
 
 .social-feeds h3, .home-events .subfeature a h4 {
@@ -774,7 +780,7 @@ h1.content-heading .home-fest-dates {
 }
 
 .social-feeds .subfeature {
-    border: 1px solid #00ffab;
+    border: 1px solid #61FFC8;
     height: 358px;
     overflow: hidden;
     margin-top: 0;
@@ -799,13 +805,12 @@ h1.content-heading .home-fest-dates {
 }
 
 .article-header a h2:hover, .article-header a h3:hover {
-    color: #666666;
+    color: #F2F2F2;
 }
 
 .post-date, .event-date {
-    font-style: italic;
     margin-bottom: 0;
-    color: #333333;
+    color: #000;
     display: block;
     font-weight: 100;
 
@@ -824,7 +829,7 @@ h1.content-heading .home-fest-dates {
 
 #partner .subfeature a h3 {
     text-align: center;
-    color: #111111;
+    color: #FFFFFF;
     padding: 5px 0;
     /*background: transparent url(images/content_bg.png) repeat;*/
 }
@@ -869,7 +874,7 @@ h2.artist-scroll a {
 }
 
 #post-449 p.lineup-intro {
-    background: #111111;
+    background: #FFFFFF;
     font-size: 14px;
     text-transform: none;
     line-height: 20px;
@@ -946,7 +951,7 @@ div.issuuembed div div:last-child {
 }
 
 .entry-content p a {
-    color: #00ffab;
+    color: #61FFC8;
 }
 
 .feature-footer {
@@ -1027,13 +1032,13 @@ h2.artist-showcase {
   padding: 8px 10px; 
   height: 100%;
   width: 100%;
-  color: #111111;
+  color: #FFFFFF;
   font-size: 14px;
 }
 
 a.next-prev-nav h1 {
     font-size: 20px;
-    color: #00ffab;
+    color: #61FFC8;
     display: inline;
     font-style: italic;
     font-weight: 700;
@@ -1046,7 +1051,7 @@ a.next-prev-nav h1 {
 
 .sidebar-title {
     font-size: 16px;
-    background: #00FFAB;
+    background: #61FFC8;
     color: #505050;
     padding-left: 10px;
 }
@@ -1063,13 +1068,12 @@ a.next-prev-nav h1 {
 
 .sidebar-button h1 {
     
-    background: #5AC4A9;
+    background: #5AC4A9;61FFC8
     color: #000000;
     margin-bottom: 30px;
     text-align: center;
     font-size: 14px;
     font-weight: 700;
-    font-style: italic;
 }
 
 .page_content h2 {
@@ -1209,7 +1213,7 @@ a.next-prev-nav h1 {
 #constant-contact-signup .button, #mc-embedded-subscribe-form .button {
     background: #393939;
     padding: 8px 12px;
-    color: #00ffab;
+    color: #61FFC8;
     font-size: 13px;
     text-transform: uppercase;
     border: none;
@@ -1220,16 +1224,16 @@ a.next-prev-nav h1 {
 #constant-contact-signup #cc_email, #mc-embedded-subscribe-form #mc_email {
     padding: 7px;
     height: 20px;
-    background: #666666;
+    background: #FFFFFF;
     border: none;
     border-radius: 0;
-    color: #111111;
+    color: #393939;
     }
 
 .widget_title {
     text-transform: uppercase;
     font-size: 30px;
-    color: #393939;
+    color: #FFFFFF;
     padding: 10px 0;
     }
 
@@ -1240,7 +1244,7 @@ a.next-prev-nav h1 {
 
 .footericons {
     float: right;
-    background: #999999;
+    background: #FFFFFF;
     margin-right: 20px;
 }
 
@@ -1435,7 +1439,7 @@ div[class$="sidebar"] .blogwidget, .sidebar-button h1 {
 
 .blogwidget ul li {
     /*background: transparent url(images/featured_bg.png); */
-    background: #888888; 
+    background: #FFFFFF; 
 }
 
 .blogwidget ul li:hover {
@@ -1446,7 +1450,7 @@ div[class$="sidebar"] .blogwidget, .sidebar-button h1 {
 	padding: 10px 20px;
 	display: block;
 	font-size: 17px;
-	border-bottom: 1px dotted #00ffab;
+	border-bottom: 1px dotted #61FFC8;
 	color: #000000;
 	
 }
@@ -1474,11 +1478,11 @@ div[class$="sidebar"] .blogwidget, .sidebar-button h1 {
 }
 
 #filters p a:hover {
-    color: #00ffab;
+    color: #61FFC8;
 }
 
 #filters p a.selected {
-    color: #00ffab;
+    color: #61FFC8;
 }
 
 .isotope-item {
@@ -1757,7 +1761,7 @@ div[class$="sidebar"] .blogwidget, .sidebar-button h1 {
 }
 
 .tweets {
-  color: #111111;
+  color: #FFFFFF;
   width: 100%;
   background: white;
   border: 1px solid #AAA;
@@ -1788,7 +1792,7 @@ div[class$="sidebar"] .blogwidget, .sidebar-button h1 {
   font-size: 12px;
   width: 330px;
   line-height: 16px; 
-  color: #111111;
+  color: #FFFFFF;
 }
 
 .tweet_text a {
@@ -1798,7 +1802,7 @@ div[class$="sidebar"] .blogwidget, .sidebar-button h1 {
   color: #666666; }
 
 .tweet_text a.profile, .soundcloud_artist {
-  color: #111111;
+  color: #FFFFFF;
   text-decoration: none;
   font-weight: bold; }
 
@@ -2112,5 +2116,230 @@ a.decibelbtn {
 
 .subfeature {
     /*height: 220px;*/
+}
+
+/* Parallax */
+
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
+}
+
+/* Header */
+
+.header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+    /*background: transparent url(images/db2015-website-header.png) repeat;*/
+    background-color: #61FFC8;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Content */
+
+.header-content {
+    position: relative;
+    top: 45%;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+.header-logo {
+    margin-bottom: 15px;
+}
+
+.logo-img {
+    width: 600px;
+}
+
+.header-dates {
+    color: #FFF;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+.slashes {
+    color: #00FFFF;
+}
+
+.u-uppercase {
+    text-transform: uppercase;
+}
+
+/* Homepage Nav */
+
+.home-header-nav {
+    position: absolute;
+    width:100%;
+    bottom: 0;
+    text-align:center;
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    height: 60px;
+    z-index: 1000;
+}
+
+.nav-logo {
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+/* General Nav */
+
+.header-nav {
+    width: 100%;
+    text-align:center;
+    margin: 0;
+    color: #fff;
+    font-size: 14px;
+    height: 60px;
+    z-index: 1000;
+    background: transparent url(images/db2015-website-header.png) repeat;
+    background-size: cover;
+    background-position: bottom; 
+    background-color: #61FFC8;
+}
+
+
+.header-nav-list {
+    margin: 0;
+    list-style-type: none;
+    height: 100%;
+}
+
+.header-nav-list li:first-child {
+    border-left: 1px solid #fff;
+}
+
+.header-nav-list li {
+    display: inline-block;
+    border-right: 1px solid #fff;
+    height: 100%;
+    width: 150px;
+    margin-left: -4px;
+}
+
+.header-nav-list li a {
+    display: inline-block;
+    text-decoration: none;
+    color: inherit;
+    padding: 25px;
+    letter-spacing: 2px;
+    width: 100%;
+}
+
+.header-nav-list li:hover {
+    background-color: #fff;
+}
+
+.header-nav-list li a:hover {
+    color: rgba(0,0,0,0.7);
+}
+
+/* Home Page Tickets */
+
+.fullscreen-section {
+    height: 100vh;
+    position: relative;
+}
+
+.tickets-container {
+    text-align: center;
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+}
+
+.lineup-tickets-btn {
+    font-family: 'Futura', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    width: 350px;
+    height: 80px;
+    background-color: #232F87;
+    border-radius: 0;
+    border: 0;
+    text-transform: uppercase;
+}
+
+/* Main footer */
+
+.main-footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-icon {
+    position: relative;
+    height: 65px;
+    width: 65px;
+    background-size: 65px 65px;
+    margin: 0;
+}
+
+/* Events */
+
+.upcoming-page {
+    color: #000;
+    margin-bottom: 50px;
+}
+
+.upcoming-title {
+    letter-spacing: 1px;
+    margin: 50px 0;
+}
+
+.event-container {
+    height: 280px;
+}
+
+.event-info-container {
+    text-transform: uppercase;
+    font-family: 'Futura',sans-serif;
+    font-weight: 300;
+}
+
+.event-date-big {
+    font-size: 170px;
+    line-height: 1;
+    margin-bottom: 10px;
+    font-weight: 100;
+}
+
+.event-artist {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.event-photo-container {
+    height: 100%;
+}
+
+.event-photo {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Utilities */
+
+.section-hr {
+    width: 30px;
+    color: #000;
+    margin: 0 0 24px;
+    border-top: 1px solid #000;
+}
+
+.bg-mint {
+    background-color: #61FFC8;
+}
+
+.bg-grey {
+    background-color: #F2F2F2;
 }
 
