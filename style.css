@@ -2230,7 +2230,7 @@ a.decibelbtn {
     color: inherit;
     padding: 25px;
     letter-spacing: 2px;
-
+    width: 100%;
 }
 
 .header-nav-list li:hover {

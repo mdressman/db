@@ -28,7 +28,7 @@ get_header(); ?>
 
 			    if (have_posts()) : while (have_posts()) : the_post(); 
 
-			    $event_fields = array('_event_date', '_event_tickets_link','_event_facebook_link');
+			    $event_fields = array('_event_date', '_event_tickets_link','_event_facebook_link', '_event_venue');
 
 				$event_data = array();
 
@@ -37,22 +37,6 @@ get_header(); ?>
 				}
 
 				?>
-				<!--
-			    <article id="post-<?php the_ID(); ?>" <?php post_class('clearfix'); ?> role="article">
-				
-				    <header class="article-header post-details">
-					    
-				    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-				    		<h2><?php the_title(); ?></h2>
-				    		<span class="event-date"><?php echo date("l, F j Y", $event_data['_event_date']) ?></span>
-				    		<div class="img-wrapper"><?php the_post_thumbnail( 'span6' ); ?></div>
-				    	</a>
-          
-				    </header>					
-			
-			    </article>
-			    -->
-
 
 			    <div class="event-container row">
 					<div class="event-info-container col-md-4">
@@ -61,7 +45,7 @@ get_header(); ?>
 							<?php echo date("n", $event_data['_event_date']) ?>.<?php echo date("j", $event_data['_event_date']) ?>
 						</div>
 						<div class="event-artist"><?php the_title(); ?></div>
-						<div class="event-location">Q Nightclub</div>
+						<div class="event-location"><?php echo $event_data['_event_venue'] ?></div>
 					</div>
 					<div class="event-photo-container col-md-8">
 				    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
