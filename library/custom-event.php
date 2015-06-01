@@ -65,10 +65,10 @@ function custom_event() {
 					'type' => 'title'
 				),
 				array(
-				'name' => 'Event Date',
-				'id' => $prefix . 'date',
-				'type' => 'text_date_timestamp'
-			),
+					'name' => 'Event Date',
+					'id' => $prefix . 'date',
+					'type' => 'text_date_timestamp'
+				),
 				array(
 					'name' => 'Buy Tickets Link',
 					'id' => $prefix . 'tickets_link',
@@ -79,6 +79,11 @@ function custom_event() {
 					'id' => $prefix . 'facebook_link',
 					'type' => 'text'
 				),
+				array(
+					'name' => 'Venue',
+					'id' => $prefix . 'venue',
+					'type' => 'text'
+				)
 			),
 		);
 
