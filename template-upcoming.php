@@ -8,9 +8,9 @@
 
 get_header(); ?>
 
-	<div class="upcoming-page">	
+	<div class="events-page">	
 		<div class="container">
-			<h1 class="upcoming-title">Calendar</h1>
+			<h1 class="page-section-title">Calendar</h1>
 
 				<?php 
 			

@@ -2281,7 +2281,7 @@ a.decibelbtn {
 .artists-container {
     padding: 0 300px;
     color: #0A0F1B;
-    font-size: 28px;
+    font-size: 26px;
     text-align: center;
     line-height: 50px;
     margin-bottom: 40px;
@@ -2341,14 +2341,9 @@ a.decibelbtn {
 
 /* Events */
 
-.upcoming-page {
-    color: #000;
+.events-page {
     margin-bottom: 50px;
-}
-
-.upcoming-title {
-    letter-spacing: 1px;
-    margin: 50px 0;
+    font-family: 'Futura',sans-serif;
 }
 
 .event-container {
@@ -2383,7 +2378,27 @@ a.decibelbtn {
     overflow: hidden;
 }
 
+/* News */
+
+.news-page {
+    font-family: 'Futura',sans-serif;
+}
+
+.news-title {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 2px;
+    margin: 50px 0;
+}
+
 /* Utilities */
+
+.page-section-title {
+    font-size: 40px;
+    font-weight: 300;
+    letter-spacing: 3px;
+    margin: 50px 0;
+}
 
 .section-hr {
     width: 30px;
