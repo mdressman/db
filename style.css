@@ -2175,7 +2175,7 @@ a.decibelbtn {
 .home-header-nav {
     position: absolute;
     width:100%;
-    bottom: 0;
+    bottom: -1px;
     text-align:center;
     margin: 0;
     color: #fff;
@@ -2241,30 +2241,87 @@ a.decibelbtn {
     color: rgba(0,0,0,0.7);
 }
 
-/* Home Page Tickets */
+/* Home Page Artists/Tickets */
+
+.lineup-section {
+    font-weight: 300;
+    padding: 20px 0;
+    font-family: 'Futura', sans-serif;
+}
 
 .fullscreen-section {
     height: 100vh;
     position: relative;
+    min-height: 740px;
+}
+
+.plus-sidebar {
+    float: left;
+}
+
+.minus-sidebar {
+    float: right;
+    position: relative;
+}
+
+.lineup-title {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.lineup-title h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 40px;
+    font-weight: 600;
+    color: #0A0F1B;
+    letter-spacing: 1px;
+}
+
+.artists-container {
+    padding: 0 300px;
+    color: #0A0F1B;
+    font-size: 28px;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 40px;
+}
+
+.artist-text {
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.artist-separator {
+    color: #3D49A6;
 }
 
 .tickets-container {
     text-align: center;
-    position: absolute;
-    bottom: 50px;
     width: 100%;
 }
 
-.lineup-tickets-btn {
-    font-family: 'Futura', sans-serif;
-    color: #fff;
-    font-size: 20px;
+.tickets-btn {
     width: 350px;
     height: 80px;
     background-color: #232F87;
+    color: #fff;
     border-radius: 0;
     border: 0;
+    transition: all 0.2s;
+}
+
+.tickets-btn-text {
     text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 3px;
+    font-size: 22px;
+}
+
+.tickets-btn:hover {
+    background-color: inherit;
+    border: 1px solid #0A0F1B;
+    color: #0A0F1B;
 }
 
 /* Main footer */

@@ -49,7 +49,7 @@ get_header(); ?>
 					</div>
 					<div class="event-photo-container col-md-8">
 				    	<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
-							<div class="event-photo"><?php the_post_thumbnail('col-md-8'); ?></div>
+							<div class="event-photo"><?php the_post_thumbnail('span6'); ?></div>
 						</a>
 					</div>
 				</div>
