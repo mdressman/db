@@ -20,27 +20,38 @@ get_header(); ?>
                 if (have_posts()) : while (have_posts()) : the_post(); 
             ?>
             <div class="row">
-            <?php if($i%2 == 0) { ?>
+
+                <div class="col-md-6">
+                    <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_post_thumbnail( 'span6' ); ?></a>
+                </div>
+                <div class="col-md-6">
+                    <hr class="section-hr" />
+                    <section class="entry-content clearfix">
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><h2><?php the_title(); ?></h2></a>
+                    </section>
+                </div>
+
+<!--             <?php if($i%2 == 0) { ?>
                 <div class="col-md-6">
                     <div><?php the_post_thumbnail( 'span6' ); ?></div>
                 </div>
                 <div class="col-md-6">
+                    <hr class="section-hr" />
                     <section class="entry-content clearfix">
                         <h2><?php the_title(); ?></h2>
-                        <?php the_excerpt(); ?> 
-                    </section> <!-- end article section -->
+                    </section>
+                    <hr class="section-hr" />
                 </div>
             <?php } else { ?>
                 <div class="col-md-6">
                     <section class="entry-content clearfix">
                         <h2><?php the_title(); ?></h2>
-                        <?php the_excerpt(); ?> 
-                    </section> <!-- end article section -->
+                    </section>
                 </div>
                 <div class="col-md-6">
                     <div><?php the_post_thumbnail( 'span6' ); ?></div>
                 </div>
-            <?php } $i++; ?>
+            <?php } $i++; ?> -->
             </div>
             <?php endwhile; ?>
             <?php endif; ?>
