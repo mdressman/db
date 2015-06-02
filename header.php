@@ -35,6 +35,7 @@
 	   	<link href="<?php bloginfo('stylesheet_url'); echo '?' . filemtime( get_stylesheet_directory() . '/style.css'); ?>" rel="stylesheet">
 	   	<link href="<?php bloginfo( 'template_url' ); ?>/css/nivo-slider.css" rel="stylesheet">
 	   	<link href="<?php bloginfo( 'template_url' ); ?>/css/nivo/default.css" rel="stylesheet">
+	   	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 	    <!--[if lt IE 9]>
 	      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -57,76 +58,23 @@
 		  fjs.parentNode.insertBefore(js, fjs);
 		}(document, 'script', 'facebook-jssdk'));</script>
 
-
-
-		<div class="container" id="nav">
-			<div class="row">
-				<div class="span12">
-
-					<div id="utility_nav">
-
-						<div class="nav_bar">
-							<nav>
-								<?php
-								wp_nav_menu(array(
-							    	'container' => false,
-							    	'container_class' => 'menu',
-							    	'menu' => __( 'The Utility Menu', 'dBx' ),
-							    	'menu_class' => 'nav top-nav clearfix pad-me',
-							    	'theme_location' => 'utility-nav',
-							    	'before' => '',
-							        'after' => '',
-							        'link_before' => '',
-							        'link_after' => '',
-							        'depth' => 0,
-							    	'fallback_cb' => 'bones_main_nav_fallback'
-								));
-								?>
-							</nav>
-						</div>
-					</div>
-
-					<div class="clearfix utility-bg-bar"></div>
-
-					<div id="nav-wrapper">
-
-
-						<a href="<?php bloginfo( 'url' ); ?>" class="logo pad-me">
-							<img src="<?php bloginfo( 'template_url' ); ?>/images/14-logo.png"/>
-						</a>
-
-						<div class="nav_bar" id="primary_nav">
-
-							<div id="primary_nav_wrapper">
-
-								<nav>
-									<?php
-
-									wp_nav_menu(array(
-								    	'container' => false,
-								    	'container_class' => 'menu',
-								    	'menu' => __( 'The Main Menu', 'dBx' ),
-								    	'menu_class' => 'nav top-nav clearfix',
-								    	'theme_location' => '365-nav',
-								    	'before' => '',
-								        'after' => '',
-								        'link_before' => '',
-								        'link_after' => '',
-								        'depth' => 0,
-								    	'fallback_cb' => 'bones_main_nav_fallback'
-									));
-
-									echo "<div class='clearfix'></div>";
-									?>
-								</nav>
-							</div>
-							<div class="clearfix" style="height: 0;"></div>
-						</div>
-					</div>
-
-					<div class="clearfix"></div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container" id="wrapper">
+		<div class="header-nav">
+        <a href="<?php bloginfo( 'url' ); ?>" class="logo pad-me">
+            <img src="<?php bloginfo( 'template_url' ); ?>/images/15-logo-sm.png"/>
+        </a>
+        <?php
+            wp_nav_menu(array(
+                'container' => false,
+                'container_class' => 'menu',
+                'menu' => __( 'The Main Menu', 'dBx' ),
+                'menu_class' => 'header-nav-list u-uppercase',
+                'theme_location' => '365-nav',
+                'before' => '',
+                'after' => '',
+                'link_before' => '',
+                'link_after' => '',
+                'depth' => 0,
+                'fallback_cb' => 'bones_main_nav_fallback'
+            ));
+        ?>
+    </div>
